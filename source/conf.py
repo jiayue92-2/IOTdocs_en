@@ -14,17 +14,21 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_rtd_theme
-from recommonmark.parser import CommonMarkParser
 
 # -- Project information -----------------------------------------------------
 
-project = 'test-readthedocs'
-copyright = '2021, aaa'
-author = 'aaa'
+project = 'ASR IoT Docs'
+copyright = '2021, ASR'
+author = 'ASR'
+master_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.1'
+release = 'V0.0.1'
+
+import recommonmark
+from recommonmark.transform import AutoStructify
+
+source_suffix = ['.rst', '.md']
 
 
 # -- General configuration ---------------------------------------------------
@@ -33,6 +37,7 @@ release = 'v0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'recommonmark',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,9 +59,14 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_static_path = ['_static']
 
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-source_suffix = ['.rst', '.md']
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'enable_math': True,
+        'enable_inline_math': True,
+        'enable_eval_rst': True,
+        'enable_auto_doc_ref': False,
+    }, True)
+    app.add_transform(AutoStructify)
+    
