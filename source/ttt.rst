@@ -28,7 +28,7 @@ The product models corresponding to this document are as follows.
   
 ASR and ASR Microelectronics Co., Ltd. are trademarks of ASR Microelectronics Co., Ltd. 
 
-Other trade names, trademarks and registered trademarks mentioned in this document are property of their respective owners, and are hereby acknowledged.
+Other trade names, trademarks and registered trademarks mentioned in this document are property of their respective owners.
 
 **Disclaimer** 
  
@@ -240,7 +240,7 @@ The boot mode can be configured by the levels of BOOT0 pin and the data in the F
 3. Electrical Characteristics
 =============================
 
-Electrical Characteristics include *absolute maximum rating*, *power consumption characteristics* and *recommended operating range* for the SoC and module.
+Electrical Characteristics include *absolute maximum rating*, *recommended operating range*, *TRX performance* and *power consumption characteristics* for the SoC and module.
 
 3.1 Absolute Maximum Rating
 ---------------------------
@@ -691,9 +691,9 @@ GPIO62   GPIO_PORTD_14 LPTIM_IN2   LPUART_RX  LPTIM_ETR
 .. |image1| image:: img/6601_DS/图1-1.png
 .. |image2| image:: img/6601_DS/表1-2.png
 .. |image3| image:: img/6601_DS/图2-1.png
-.. |image4| image:: img/6601_DS/表3-3.PNG
-.. |image5| image:: img/6601_DS/表3-4.PNG
-.. |image6| image:: img/6601_DS/图4-1.PNG
-.. |image7| image:: img/6601_DS/图4-2.PNG
-.. |image8| image:: img/6601_DS/图4-3.PNG
-.. |image9| image:: img/6601_DS/图4-4.PNG
+.. |image4| image:: img/6601_DS/表3-3.png
+.. |image5| image:: img/6601_DS/表3-4.png
+.. |image6| image:: img/6601_DS/图4-1.png
+.. |image7| image:: img/6601_DS/图4-2.png
+.. |image8| image:: img/6601_DS/图4-3.png
+.. |image9| image:: img/6601_DS/图4-4.png
