@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ASR IoT Docs'
-copyright = '2021, ASR'
+copyright = 'ASR Microelectronics Co., Ltd'
 author = 'ASR'
 master_doc = 'index'
 

@@ -4,11 +4,11 @@ ASR6601 Datasheet
 Introduction
 ------------
 
-**About This Document**  
+**About This Document**
 
 This document introduces the specifications of LPWAN SoC ASR6601.
 
-**Included Chip Models**  
+**Included Chip Models**
 
 The product models corresponding to this document are as follows.
 
@@ -21,27 +21,27 @@ The product models corresponding to this document are as follows.
 +-----------+--------+-------+-----------------------------+---------------+---------------+
 
 **Copyright Notice**
-  
+
 © 2021 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any languages in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
 
 **Trademark Statement**
-  
+
 ASR and ASR Microelectronics Co., Ltd. are trademarks of ASR Microelectronics Co., Ltd. 
 
 Other trade names, trademarks and registered trademarks mentioned in this document are property of their respective owners.
 
-**Disclaimer** 
- 
+**Disclaimer**
+
 ASR do not give any warranty of any kind and may make improvements and/or changes in this document or in the product described in this document at any time.
 
 This document is only used as a guide, and no contents in the document constitute any form of warranty. Information in this document is subject to change without notice.
 
 All liability, including liability for infringement of any proprietary rights caused by using the information in this document is disclaimed.
 
-**ASR Microelectronics Co., Ltd.**  
+**ASR Microelectronics Co., Ltd.**
 
-Address: 9F, Building 10, No. 399 Keyuan Road, Zhangjiang High-tech Park, Pudong New Area, Shanghai, 201203, China 
- 
+Address: 9F, Building 10, No. 399 Keyuan Road, Zhangjiang High-tech Park, Pudong New Area, Shanghai, 201203, China
+
 Homepage: http://www.asrmicro.com/asrweb/
 
 **Revision History**
@@ -55,25 +55,23 @@ Homepage: http://www.asrmicro.com/asrweb/
 +---------+---------+----------------------------------------------------------------------------------------------------------+
 | 2020.10 | V1.0.2  | Added Section 3.3.                                                                                       |
 +---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2020.12 | V1.1.0  | Updated the contents and section order of Chapter 2; Added Section 2.3, Section 3.1.3 and Section 3.2.3. |
+| 2020.12 | V1.1.0  | Updated the contents and section order of Chapter 2. Added Section 2.3, Section 3.1.3 and Section 3.2.3. |
 +---------+---------+----------------------------------------------------------------------------------------------------------+
-| 2021.02 | V1.2.0  | Updated Section 1.5; Added Chapter 2.                                                                    |
+| 2021.02 | V1.2.0  | Updated Section 1.5. Added Chapter 2.                                                                    |
 +---------+---------+----------------------------------------------------------------------------------------------------------+
-
-
 
 1. Overview
-===========
+-----------
 
 1.1 General
------------
+~~~~~~~~~~~
 
 ASR6601 is a general LPWAN Wireless Communication SoC, with integrated RF Transceiver, Modem and a 32-bit RISC MCU. The MCU uses ARM Cortex M4, with 48 MHz operation frequency. The RF Transceiver has continuous frequency coverage from 150 MHz to 960 MHz. The Modem supports LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The Modem also supports BPSK modulation in TX and (G)MSK modulation in TX and RX. The LPWAN Wireless Communication Module designed with ASR6601 provides ultra-long range and ultra-low power communication for LPWAN application.
 
 ASR6601 can achieve a high sensitivity to -148 dBm and the maximum transmit power is up to +22 dBm. This makes the chip suitable to be used in long range LPWAN and have high efficiency. The total chip package is of very small size, QFN 6 mm x 6 mm/QFN 8 mm x 8 mm.
 
 1.2 Key Feature
----------------
+~~~~~~~~~~~~~~~
 
 -  Small footprint: QFN48, 6 mm x 6 mm or QFN68, 8 mm x 8 mm
 
@@ -128,14 +126,15 @@ ASR6601 can achieve a high sensitivity to -148 dBm and the maximum transmit powe
 -  Supports AES, DES, RSA, ECC, SHA and SM2/3/4
 
 1.3 Block Diagram
------------------
+~~~~~~~~~~~~~~~~~
 
 The following figure shows the block diagram of ASR6601 SoC and ASR6601 LPWAN Module.
 
 |image1|
 
+
 1.4 Specification
------------------
+~~~~~~~~~~~~~~~~~
 
 The table below shows the general specifications of ASR6601 SoC.
 
@@ -152,7 +151,7 @@ The table below shows the general specifications of ASR6601 SoC.
 +-------------+-------------------------------------------------------------------------+
 
 1.5 Applications
-----------------
+~~~~~~~~~~~~~~~~
 
 ASR6601 LPWAN chip enables new generation of IoT applications.
 
@@ -172,19 +171,18 @@ ASR6601 LPWAN chip enables new generation of IoT applications.
 -  Remote control applications
 
 1.6 Part Number Information
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The key feature differences between two parts number of ASR6601 are list below, ASR6601SE can support more analog functions with more GPIOs.
 
 |image2|
 
 
-
 2. System Description
-=====================
+---------------------
 
 2.1 Power Supply
-----------------
+~~~~~~~~~~~~~~~~
 
 ASR6601 has several separated power supply pins. With these separated power supply pins, the interference from digital parts of SoC to RF blocks is reduced.
 
@@ -205,7 +203,7 @@ ASRR6601 Power Grid is shown in the figure below:
 -  **VBAT_ANA**: The power supply for analog blocks.
 
 2.2 Boot Mode
--------------
+~~~~~~~~~~~~~
 
 The boot mode can be configured by the levels of BOOT0 pin and the data in the Flash.
 
@@ -231,19 +229,17 @@ The boot mode can be configured by the levels of BOOT0 pin and the data in the F
 | <2         | 1             | 0          | X         | 0          | X              | boot from Sys SRAM   |
 +------------+---------------+------------+-----------+------------+----------------+----------------------+
 
--  DebugLevel, UseFlashBoot0, FlashBoot0 and FlashBoot1 is the information area of the Flash, they can be modified according to the application. MainFlashEmpty is determined by the data of address 0 in the flash Main area. If the data in the address 0 of Flash Main ared is 0xFFFFFFFF, the value of MainFlashEmpty is 1, otherwise the value of MainFlashEmpty is 0. BOOT0 pin is GPIO02 in the package.
+-  DebugLevel, UseFlashBoot0, FlashBoot0 and FlashBoot1 is the information area of the Flash, they can be modified according to the application. MainFlashEmpty is determined by the data of address 0 in the flash Main area. If the data in the address 0 of Flash Main area is 0xFFFFFFFF, the value of MainFlashEmpty is 1, otherwise the value of MainFlashEmpty is 0. BOOT0 pin is GPIO02 in the package.
 
 -  The boot mode is selected according to the configurations when the system is in these status: first powered up, exit the Standby mode or reset.
 
-
-
 3. Electrical Characteristics
-=============================
+-----------------------------
 
-Electrical Characteristics include *absolute maximum rating*, *recommended operating range*, *TRX performance* and *power consumption characteristics* for the SoC and module.
+Electrical Characteristics include *absolute maximum rating*, *power consumption characteristics* and *recommended operating range* for the SoC and module.
 
 3.1 Absolute Maximum Rating
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 =========================== ====== ==== ==== ==== ====
 Parameter                   Symbol Min. Typ. Max. Unit
@@ -254,7 +250,11 @@ RF Input Power              Pin              +10  dBm
 =========================== ====== ==== ==== ==== ====
 
 3.2 Recommended Operating Range
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <center>
 
 ============== ====== ==== ==== ==== ====
 Parameter      Symbol Min. Typ. Max. Unit
@@ -263,26 +263,33 @@ Supply Voltage VDD    1.7  3.3  3.7  V
 RF Input Power Pin              +10  dBm
 ============== ====== ==== ==== ==== ====
 
+.. raw:: html
+
+   </center>
+
+
 3.3 TRX Performance
--------------------
+~~~~~~~~~~~~~~~~~~~
+
 |image4|
 
+
 3.4 Power Consumption Characteristics
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 |image5|
 
 **Notes:** *IDD_Standby and IDD_Stop3 is tested at 25 degrees.*
 
 
-
 4. Package and Pin Definition
-=============================
+-----------------------------
 
 4.1 ASR6601SE QFN68
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 4.1.1 ASR6601SE QFN68 Pin Definition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +---------+--------------+----------+----------------------------------------------------+------------------+
 | Pin No. | Pin Name     | Pin Type | Description                                        | Power Domain (V) |
@@ -425,18 +432,21 @@ RF Input Power Pin              +10  dBm
 +---------+--------------+----------+----------------------------------------------------+------------------+
 
 4.1.2 ASR6601SE QFN68 Pin Assignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 |image6|
 
 4.1.3 ASR6601SE QFN68 Mechanical Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 |image7|
 
+
 4.2 ASR6601CB QFN48
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 4.2.1 ASR6601CB QFN48 Pin Definition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +---------+-----------+----------+----------------------------------------------------+------------------+
 | Pin No. | Pin Name  | Pin Type | Description                                        | Power Domain (V) |
@@ -539,15 +549,18 @@ RF Input Power Pin              +10  dBm
 +---------+-----------+----------+----------------------------------------------------+------------------+
 
 4.2.2 ASR6601CB QFN48 Pin Assignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 |image8|
 
 4.2.3 ASR6601CB QFN48 Mechanical Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 |image9|
 
+
 4.3 GPIO Function MUX Table
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ======== ============= =========== ========== ==============
 GPIO No. Fun=0         Fun=1       Fun=2      Fun=3
