@@ -1,5 +1,7 @@
 ASR Docs Page
 =============================
+`简体中文 <https://test-readthedocs-zhcn.readthedocs.io/zh/latest/index.html>`_
+
 This is the documentation for ASR IoT products.
 
 
