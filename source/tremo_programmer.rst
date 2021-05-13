@@ -218,13 +218,13 @@ Before download, press and hold the SW3 button to pull up GPIO02, meanwhile, pre
 
 This problem is caused by no response from the development board to be downloaded. Please check the following:
 
-(1) Check if the serial port connection is normal. hello
+(1) Check if the serial port connection is normal. 
 
 (2) Check if the MCU is in download mode. Try to press and hold the SW3 button while pressing the RESET button to reboot the development board.
 
 |image11|
 
-.. |image1| image:: img/6601_Tremor/图1-1.png
+.. |image1| image:: img/6601_Tremor/硬件图.png
 .. |image2| image:: img/6601_Tremor/图1-2.png
 .. |image3| image:: img/6601_Tremor/图2-1.png
 .. |image4| image:: img/6601_Tremor/图2-2.png
