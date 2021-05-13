@@ -218,7 +218,7 @@ Before download, press and hold the SW3 button to pull up GPIO02, meanwhile, pre
 
 This problem is caused by no response from the development board to be downloaded. Please check the following:
 
-(1) Check if the serial port connection is normal.
+(1) Check if the serial port connection is normal. hello
 
 (2) Check if the MCU is in download mode. Try to press and hold the SW3 button while pressing the RESET button to reboot the development board.
 
