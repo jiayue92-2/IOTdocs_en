@@ -77,7 +77,7 @@ LoRa nodes hardware requirements：
 
 ASR6601SE development board v2.0 front and back photos are as follows:
 
-​|image1|
+|image1|
 
 .. raw:: html
 
@@ -100,6 +100,7 @@ The Back View of ASR6601SE Development Board v2.0
 .. raw:: html
 
    </center>
+
 
 +------------------------------------------------+------------------------------------------------------------------------+
 | Interface                                      | Description                                                            |
@@ -312,7 +313,7 @@ The following introduces the steps of downloading with command line:
 
 (1) **Config Serial Port**
 
-    First, run the command: ls /dev/ to check the serial port of ASR6601 development board.
+    First, run the command ``ls /dev/`` to check the serial port of ASR6601 development board.
 
     Usually, there is a ttyS\* device under MSYS2. This device corresponds to one COM port number under Windows. For example, COM6 corresponds to */dev/ttyS5* in MSYS2, and the serial device is usually */dev/ttyUSB** under Ubuntu.
 

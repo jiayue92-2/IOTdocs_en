@@ -1,12 +1,16 @@
-ASR6601 Tremo Programmer Tool User Guide
-========================================
+.. role:: raw-latex(raw)
+   :format: latex
+..
+
+ASR6601 Development Board Test Guide
+====================================
 
 Introduction
 ------------
 
 **About This Document**
 
-This document mainly introduces the download tool *Tremo Programmer* for the developers to use the tool to download to the Flash of LPWAN SoC ASR6601.
+This document introduces how to test ASR6601 development board to facilitate the developers to better understand the performance of LPWAN SoC ASR6601.
 
 **Included Chip Models**
 
@@ -46,17 +50,19 @@ Homepage: http://www.asrmicro.com/asrweb/
 
 **Revision History**
 
-+---------+---------+-------------------------------------------------------------------------------------------------------+
-| Date    | Version | Release Notes                                                                                         |
-+=========+=========+=======================================================================================================+
-| 2020.05 | V0.1.0  | First release.                                                                                        |
-+---------+---------+-------------------------------------------------------------------------------------------------------+
-| 2020.09 | V0.2.0  | Updated some pictures.                                                                                |
-+---------+---------+-------------------------------------------------------------------------------------------------------+
-| 2020.09 | V0.3.0  | Updated the pictures of ASR6601SE development board v2.0.                                             |
-+---------+---------+-------------------------------------------------------------------------------------------------------+
-| 2021.05 | V1.1.0  | Deleted Chapter 1, and move the contents to “About This Document”. Deleted the contents about Option. |
-+---------+---------+-------------------------------------------------------------------------------------------------------+
++----------+-------------+--------------------------------------------------------------------+
+| **Date** | **Version** | **Release Notes**                                                  |
++==========+=============+====================================================================+
+| 2020.08  | V0.1.0      | First release.                                                     |
++----------+-------------+--------------------------------------------------------------------+
+| 2020.09  | V0.2.0      | Updated some pictures.                                             |
++----------+-------------+--------------------------------------------------------------------+
+| 2020.10  | V0.3.0      | Updated the pictures of ASR6601SE development board v2.0.          |
++----------+-------------+--------------------------------------------------------------------+
+| 2021.01  | V1.1.0      | Deleted Chapter 1, and move the contents to “About This Document”. |
++----------+-------------+--------------------------------------------------------------------+
+| 2021.05  | V1.2.0      | Updated Section 1.3.                                               |
++----------+-------------+--------------------------------------------------------------------+
 
 1. Preparation
 --------------
@@ -64,7 +70,7 @@ Homepage: http://www.asrmicro.com/asrweb/
 1.1 Hardware
 ~~~~~~~~~~~~
 
-Hardware requirements：
+LoRa nodes hardware requirements：
 
 -  1 ASR6601 development board
 -  1 antenna
@@ -84,11 +90,11 @@ ASR6601SE development board v2.0 front and back photos are as follows:
 
 The Front View of ASR6601SE Development Board v2.0
 
-|image2|
-
 .. raw:: html
 
    </center>
+
+|image2|
 
 .. raw:: html
 
@@ -135,6 +141,10 @@ The Back View of ASR6601SE Development Board v2.0
 
 When testing ASR6601 development board, please make sure the following jumpers’ state is set correctly.
 
+.. raw:: html
+
+   <center>
+
 ============================================== ================
 Jumper                                         Connection State
 ============================================== ================
@@ -148,90 +158,142 @@ JP7                                            connected
 JP8                                            Not connected
 ============================================== ================
 
+.. raw:: html
+
+   </center>
+
+
 1.2 Software
 ~~~~~~~~~~~~
 
-*Tremo Programmer* is located in the *tools/programmer* directory of ASR6601 SDK.
+1.2.1 Development Environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2. Tool Introduction
---------------------
+Customers can use Keil to develop ASR6601. Makefile also can be used for compilation and download. For further details, please refer to *ASR6601_Quick Start Guide.*
 
-2.1 Main Interface
-~~~~~~~~~~~~~~~~~~
+1.2.2 Test Codes
+^^^^^^^^^^^^^^^^
 
-The main interface of Tremo Programmer is shown as follows:
+Test codes can be found in the directory of *projects\\${DEMO_BOARD}\\examples\\lora\\lora\_test* in SDK. *${DEMO_BOARD}* is the corresponding board name. For example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB development board.
+
+1.3 Compilation and Download
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please refer to *ASR6601_Quick Start Guide* for compilation and download introductions.
+
+2. Tests
+--------
+
+There are some AT commands built in test codes, which can be used to test part of functions.
+
+2.1 Power Test
+~~~~~~~~~~~~~~
+
+**Test Command:** With one serial port tool, and run AT command *AT+CTXCW=490000000,22* to test the power. Please refer to *Section* *3.2.6* for parameter descriptions.
+
+**Reference Result:** 21 dbm
+
+2.2 Sensitivity Test
+~~~~~~~~~~~~~~~~~~~~
+
+**Test Command:** With one serial port tool, and run AT command *AT+CRXS=490000000,0,0,2,0* to test the sensitivity. Please refer to *Section* *3.2.3* for parameter descriptions.
+
+**Reference Result:** -138 dbm
+
+2.3 Power Consumption Test
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Unplug the JP4 jumper. Connect the multimeter. Please see the figure below for reference.
+
+.. raw:: html
+
+   <center>
 
 |image3|
 
-2.2 Flash Tab
-~~~~~~~~~~~~~
+.. raw:: html
+
+   </center>
+
+
+2.3.1 TX Power Consumption Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Test Commands:** AT+CTXCW=490000000,22
+
+**Reference Result:** 110 mA
+
+2.3.2 RX Power Consumption Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Test Commands:** AT+CRX=490000000,0,0,1
+
+**Reference Result:** 8.9 mA
+
+2.3.3 DeepSleep Power Consumption Test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Test Commands:** AT+CSLEEP=0
+
+**Reference Result:** 1.5 uA
+
+3. Basic AT Commands
+--------------------
+
+3.1 Overview
+~~~~~~~~~~~~
+
+========= =============================================
+Commands  Description
+========= =============================================
+AT+CTXCW  Send one sustained wave
+AT+CTX    Send one LoRa package in every other second
+AT+CRXS   Receive commands. Sensitivity test applicable
+AT+CRX    Receive commands. Distance test applicable
+AT+CSLEEP Low-power test commands
+AT+CSTDBY Sx1262 Standby mode test commands
+========= =============================================
+
+3.2 Commands
+~~~~~~~~~~~~
+
+3.2.1 Low-power Test Commands +CSLEEP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image4|
 
-The Flash tab is divided into four areas:
-
-**1. Serial Port Configuration**: Set the communication serial port and baud rate, etc.
-
-**2. File Download Configuration**: Configure the file to be downloaded and the address to download the file to. Users must download at least one file to 0x08000000 address to ensure that the program can run properly.
-
-**3. Download Operation**: This area has “Start” button for downloading and “Erase All” button. Only when you need to erase all the information in Flash, you click the “Erase All” button.
-
-**4. Status Display**: Display the download result (success or failure) and related information.
-
-3. Tool Operation
------------------
-
-3.1 Enter Download Mode
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Before download, press and hold the SW3 button to pull up GPIO02, meanwhile, press the RESET button to reboot the board to enter download mode.
+3.2.2 Lower-power Test Commands +CSTDBY
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image5|
 
-
-3.2 Download
-~~~~~~~~~~~~
-
-(1) Choose the serial port:
+3.2.3 Test Commands +CRXS
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image6|
 
-(2) Configure the download file:
+3.2.4 Test Commands +CRX
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image7|
 
+3.2.5 Test Commands +CTX
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 |image8|
 
-(3) Click “Start” Button to start downloading:
+3.2.6 Test Commands +CTXCW
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image9|
 
-(4) Finish downloading:
 
-|image10|
-
-4. Q&A
-------
-
-4.1 What is the reason for read response header timeout?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This problem is caused by no response from the development board to be downloaded. Please check the following:
-
-(1) Check if the serial port connection is normal.
-
-(2) Check if the MCU is in download mode. Try to press and hold the SW3 button while pressing the RESET button to reboot the development board.
-
-|image11|
-
-.. |image1| image:: img/6601_Tremor/图1-1.png
-.. |image2| image:: img/6601_Tremor/图1-2.png
-.. |image3| image:: img/6601_Tremor/图2-1.png
-.. |image4| image:: img/6601_Tremor/图2-2.png
-.. |image5| image:: img/6601_Tremor/图3-1.png
-.. |image6| image:: img/6601_Tremor/图3-2.png
-.. |image7| image:: img/6601_Tremor/图3-3.png
-.. |image8| image:: img/6601_Tremor/图3-4.png
-.. |image9| image:: img/6601_Tremor/图3-5.png
-.. |image10| image:: img/6601_Tremor/图3-6.png
-.. |image11| image:: img/6601_Tremor/图4-1.png
+.. |image1| image:: img/6601_Board/图1-1.png
+.. |image2| image:: img/6601_Board/图1-2.png
+.. |image3| image:: img/6601_Board/图2-1.png
+.. |image4| image:: img/6601_Board/图3-1.png
+.. |image5| image:: img/6601_Board/图3-2.png
+.. |image6| image:: img/6601_Board/图3-3.png
+.. |image7| image:: img/6601_Board/图3-4.png
+.. |image8| image:: img/6601_Board/图3-5.png
+.. |image9| image:: img/6601_Board/图3-6.png
