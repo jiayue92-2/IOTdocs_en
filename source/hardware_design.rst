@@ -15,9 +15,9 @@ The product models corresponding to this document are as follows.
 +-----------+--------+-------+-----------------------------+---------------+---------------+
 | Model     | Flash  | SRAM  | Core                        | Package       | Frequency     |
 +===========+========+=======+=============================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM Cortex-M4 | QFN68, 8*8 mm | 150 ~ 960 MHz |
+| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM STAR      | QFN68, 8*8 mm | 150 ~ 960 MHz |
 +-----------+--------+-------+-----------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM Cortex-M4 | QFN48, 6*6 mm | 150 ~ 960 MHz |
+| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM STAR      | QFN48, 6*6 mm | 150 ~ 960 MHz |
 +-----------+--------+-------+-----------------------------+---------------+---------------+
 
 **Copyright Notice**
@@ -61,7 +61,7 @@ Homepage: http://www.asrmicro.com/asrweb/
 1. Test Overview
 ----------------
 
-ASR6601 is a general Sub-GHz SoC chip, with integrated Sub-1G RF transceiver and 32-bit RISC MCU. This transceiver is compatible with LoRaWAN® networks with the support for LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The MCU uses ARM Cortex M4, with 48 MHz operation frequency, supports 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x 12-bit SAR ADC, 1 x 12-bit DAC, etc.
+ASR6601 is a general Sub-GHz SoC chip, with integrated Sub-1G RF transceiver and 32-bit RISC MCU. This transceiver is compatible with LoRaWAN® networks with the support for LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The MCU uses ARM STAR, with 48 MHz operation frequency, supports 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x 12-bit SAR ADC, 1 x 12-bit DAC, etc.
 
 Continuous frequency coverage from 150 MHz to 960 MHz allows the support of all major sub-GHz ISM bands around the world. ASR6601 is capable of delivering up to +22 dBm with high-efficiency PA. High sensitivity to -148 dBm is achieved with just 4.6 mA active receive current consumption. The ultra-low deep sleep current of less than 1.6uA greatly extends the battery life. ASR6601 uses QFN48 (6x6mm) and QFN68 (8x8mm) packages. AS such, ASR6601 is suitable for ultra-distance communication, ultra-low power consumption and cost-effective LPWAN applications.
 
@@ -83,7 +83,7 @@ This document is a guide for ASR6601 hardware design, including the schematic de
 
 -  Up to 42 configurable GPIOs: 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x QSPI and 2 x WDG
 -  4 x GPtimer, 2 x Basic Timer, 2 x LP timer and 1 x Sys Ticker
--  48 MHz ARM Cortex-M4 CPU
+-  48 MHz ARM STAR CPU
 -  4-channel DMA engine x 2
 -  Embedded 12-bit 1 Msps SAR ADC
 -  Embedded 12-bit DAC
