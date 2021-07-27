@@ -280,7 +280,7 @@ If using DC-DC supplies power to the regulator (REG PA), the power inductor is a
 
 |image12|
 
-Please refer to *Critical Material Recommendations* for details about recommended suppliers.
+**Note:** Please refer to *Critical Material Recommendations* for details about recommended suppliers.
 
 3.4 External Antenna
 ~~~~~~~~~~~~~~~~~~~~
@@ -308,16 +308,6 @@ Pay attention to the following aspects, regarding to the PCB power supply routin
 
 Pay attention to the following aspects, regarding to the PCB RF routing as shown in the figure below:
 
-.. raw:: html
-
-   <center>
-
-|image13|
-
-.. raw:: html
-
-   </center>
-
 \1. RF matching components should be placed as close to the chip as possible.
 
 \2. The RF wires should be put only on the top layer and should be without trans-layer routing. The characteristic impedance of the transmission lines must be 50 Ohm.
@@ -329,6 +319,18 @@ Pay attention to the following aspects, regarding to the PCB RF routing as shown
 \5. High-frequency signal wirings must not show up around the RF wirings. The antennas of RF wirings must stay away from all devices transmitting high-frequency signals, such as crystals, UART, PWM, SDIO, etc.
 
 \6. RF transmission lines’s characteristic impedance is 50 Ohm. We suggest using 18 mil width and 14 mil space. Please adjust according to the layers and construction of the PCB, but the width should not less than 12 mil. We recommend to use a smooth transition at the connection between the routings and the SMA antenna to reduce the impedance mutation.
+
+.. raw:: html
+
+   <center>
+
+|image13|
+
+.. raw:: html
+
+   </center>
+
+
 
 4.3 Crystal Routing
 ~~~~~~~~~~~~~~~~~~~
