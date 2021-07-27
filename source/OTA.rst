@@ -55,9 +55,11 @@ Homepage: http://www.asrmicro.com/asrweb/
 +==========+=============+====================================================================+
 | 2020.06  | V0.1.0      | First Release.                                                     |
 +----------+-------------+--------------------------------------------------------------------+
-| 2020.10  | V0.2.0      | Updated Figure 1-1 and Figure 1-2.                                 |
+| 2020.10  | V0.2.0      | Updated the figures in Section 1.1.                                |
 +----------+-------------+--------------------------------------------------------------------+
 | 2021.05  | V1.1.0      | Deleted Chapter 1, and move the contents to “About This Document”. |
++----------+-------------+--------------------------------------------------------------------+
+| 2021.06  | V1.2.0      | Added verified Android phone models in Section 1.1.                |
 +----------+-------------+--------------------------------------------------------------------+
 
 1. Preparation
@@ -67,13 +69,18 @@ Homepage: http://www.asrmicro.com/asrweb/
 ~~~~~~~~~~~~
 
 Hardware requirements are as follows:
+ -  2 ASR6601 development boards
+ -  2 antennas
+ -  2 USB cable
+ -  1 USB converter
+ -  1 Android cellphone,
+    and the Android phone models verified by ASR are as follows:    
+     -  HUAWEI Mate 20 Pro, Android 10, EMUI 11.0.0
+     -  HUAWEI nova, Android 10, EMUI 11.0.0
+     -  HUAWEI Maimang 6, Android 8, EMUI 8.0.0
+     -  Xiaomi MIX 2S, Android 9, MIUI 11.0.3
 
--  2 ASR6601 development boards
--  2 antennas
--  2 USB cable
--  1 USB converter
--  1 Android cellphone
--  1 PC
+ -  1 PC
 
 |image1|
 

@@ -53,17 +53,19 @@ Homepage: http://www.asrmicro.com/asrweb/
 +----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2020.11  | V1.0.1      | Updated some pictures.                                                                                                                                                                                                                |
 +----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2020.12  | V1.0.2      | Updated the descriptions about ASR6601 module interfaces in Figure 2-2 and Figure 2-3. Updated the I2C_CLK and I2C_DAT marks in the ASR6601 module reference design in Figure 2-2 and Figure 2-3. Updated Section 2.5 Pin Assignment. |
+| 2020.12  | V1.0.2      | Updated the descriptions about ASR6601 module interfaces in the figures in Section 2.3.  Corrected the I2C_CLK and I2C_DAT marks in the figures in Section 2.3.  Updated Section 2.5 Pin Assignment.                                  |
 +----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2021.05  | V1.1.0      | Updated the recommended crystal oscillators in Table 3-1.                                                                                                                                                                             |
+| 2021.05  | V1.1.0      | Updated Chapter 1: Overview.   Updated the recommended crystal oscillators in Table 3-1.                                                                                                                                              |
++----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2021.07  | V1.2.0      | Added Section 2.4.2 reset circuit and relevant notice.  Updated the descriptions about CPU.  Updated the figures in Section 2.3.1, 2.3.2 and 2.4.4.                                                                                   |
 +----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-1. Test Overview
+1. Overview
 ----------------
 
 ASR6601 is a general Sub-GHz SoC chip, with integrated Sub-1G RF transceiver and 32-bit RISC MCU. This transceiver is compatible with LoRaWAN® networks with the support for LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The MCU uses ARM STAR, with 48 MHz operation frequency, supports 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x 12-bit SAR ADC, 1 x 12-bit DAC, etc.
 
-Continuous frequency coverage from 150 MHz to 960 MHz allows the support of all major sub-GHz ISM bands around the world. ASR6601 is capable of delivering up to +22 dBm with high-efficiency PA. High sensitivity to -148 dBm is achieved with just 4.6 mA active receive current consumption. The ultra-low deep sleep current of less than 1.6uA greatly extends the battery life. ASR6601 uses QFN48 (6x6mm) and QFN68 (8x8mm) packages. AS such, ASR6601 is suitable for ultra-distance communication, ultra-low power consumption and cost-effective LPWAN applications.
+Continuous frequency coverage from 150 MHz to 960 MHz allows the support of all major sub-GHz ISM bands around the world. The maximum transmit power of the chip is up to +22 dBm with the high-efficiency PA integrated. High sensitivity to -148 dBm is achieved with just 4.6 mA active receive current consumption. The ultra-low deep sleep current of less than 1.6 uA greatly extends the battery life. ASR6601 uses QFN48 (6x6mm) and QFN68 (8x8mm) packages. AS such, ASR6601 is suitable for ultra-distance communication, ultra-low power consumption and cost-effective LPWAN applications.
 
 This document is a guide for ASR6601 hardware design, including the schematic design, layout notes, and suggestions to critical materials selection.
 
@@ -110,7 +112,7 @@ Pay close attention to the following aspects, regarding ASR6601 module reference
 
 \1. The default of the matching network is 470 MHz in the reference circuit. If you need any other matching network, please refer to *ASR6601_Matching_V1.0*.
 
-\2. The pullup inductor L7 (15 uH) of DC-DC must be power inductor (Package size: 2016). Refer to the Chapter 3 in this article to get the details of the power inductor. We suggest you choose 0402 package for the inductor L1 (56 nH) of VR_PA, since its rated current is larger, which helps improve the transmit power of the TX.
+\2. The pullup inductor L7 (15 uH) of DC-DC must be power inductor (Package size: 2016). Refer to *Chapter 3: Material Selection* to get the details of the power inductor. We suggest you choose 0402 package for the inductor L1 (56 nH) of VR_PA, since its rated current is larger, which helps improve the transmit power of the TX.
 
 \3. The R1，R2，R3，R4 and R7 in the schematics are mainly for testing. You can change or remove them accordingly.
 
@@ -118,7 +120,7 @@ Pay close attention to the following aspects, regarding ASR6601 module reference
 
 \5. In order to enhance ESD protection, we suggest reserving D1 and D2. D2 has some influence on RF performance, D2(TVS) with small capacitance is prefered.
 
-\6. If VDD_IN is connected to VREG, the maximum transmit power is 14dBm. If VDD_IN is connected to VDD_RF, the maximum transmit power is up to 22dBm.
+\6. If VDD_IN is connected to VREG, the maximum transmit power is 14 dBm. If VDD_IN is connected to VDD_RF, the maximum transmit power is up to 22 dBm.
 
 \7. Users can contact ASR for the DSN file of ASR6601 module schematics.
 
@@ -146,7 +148,30 @@ ASR6601 DC-DC Power Supply Scheme
 
    </center>
 
-2.4.2 Crystal Oscillator
+
+2.4.2 Reset Circuit
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The power-on reset circuit and power-on sequence are integrated into ASR6601 SoC chip, and the voltage can be normally loaded on VBAT directly.
+
+.. raw:: html
+
+   <center>
+
+|image5|
+
+ASR6601 Power-on Reset Circuit and Power-on Sequence
+
+.. raw:: html
+
+   </center>
+
+**Notice:**
+ As shown in Figure 2-5, the VBAT power supply must rise to above 0.7 Vcc within 10ms before the internal Power RST circuit can be reset normally. There is a low-voltage detection module inside the chip, when VBAT is lower than 0.3 Vcc, the inside of the chip will always be in the reset state. The chip has been optimized internally. It is recommended to use 4.7K external pull-up resistors and 330 pf capacitors for the internal Power RST circuit. The reset time should be delayed as short as possible. If a large capacitor is connected externally, VBAT rises slowly, and the system may have unnecessary risks.
+
+
+
+2.4.3 Crystal Oscillator
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 ASR6601 Demo module uses two crystal oscillators:
@@ -157,7 +182,7 @@ ASR6601 Demo module uses two crystal oscillators:
 
  b. If the bandwidth is lower than 62.5 KHz, TCXO is strongly recommended.
 
- c. As ASR6601 is integrated load capacitance matrix, please use the default value.
+ c. ASR6601 integrates load capacitance matrix, please use the default value.
 
  d. Increase external load capacitance when the frequency offset is positive, otherwise, we suggest to change 32M XO.
 
@@ -173,7 +198,7 @@ ASR6601 Demo module uses two crystal oscillators:
 
    <center>
 
-|image5|
+|image6|
 
 .. raw:: html
 
@@ -181,10 +206,10 @@ ASR6601 Demo module uses two crystal oscillators:
 
 
 
-2.4.3 RF Matching
+2.4.4 RF Matching
 ^^^^^^^^^^^^^^^^^
 
-|image6|
+|image7|
 
 Pay close attention to the following aspects, regarding to ASR6601 chip RF circuit:
 
@@ -192,13 +217,13 @@ Pay close attention to the following aspects, regarding to ASR6601 chip RF circu
 
 \2. The default of the matching network is 470 MHz in the reference circuit. If you need any other matching network, please refer to the article of *ASR6601_Matching_V1.0*.
 
-\3. XMSSJR6G0BA uses single-end controlled mode. Pin6 is the DIO2 received by CTRL signal of TRSW. DIO’s controlling logics are as following. Please note that different RFSWs have different controlling logics and pins, so please refer to the responding datasheet of RFSW.
+\3. XMSSJR6G0BA uses single-end controlled mode. Pin6 is the DIO2 received by CTRL signal of TRSW. DIO’s controlling logics are as following. Please note that different RFSWs have different controlling logics and pins, which are defined in the corresponding datasheets of RFSW.
 
  a. When DIO2 is high, RF2àTX
 
  b. When DIO2 is low, RF1àRX
 
-\4. GPIO10 connects the VDD pin of TRSW. When LoRa chip works normally, GPIO is high. When LoRa chip is in sleep mode, pull down GPIO to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5 uA electric leakage). If the power consumption is not sensitive, GIPO can be used in other ways by connecting VDD_RF to VDD of RFSW.
+\4. GPIO10 connects the VDD pin of TRSW. When ASR6601 works normally, GPIO is high. When ASR6601 is in sleep mode, GPIO is pulled down to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5 uA electric leakage). If the power consumption is not sensitive, GIPO can be used in other ways by connecting VDD_RF to VDD of RFSW.
 
 \5. ASR suggest using XMSSJR6G0BA for RFSW. Users can use replaceable materials and adjust the parameters in RF matching network. For further details, please refer to *Chapter 3: Material Selection*.
 
@@ -211,7 +236,7 @@ Please refer to *ASR6601 Datasheet* for pin definitions.
 
    <center>
 
-|image7|
+|image8|
 
 Pin Assignment of ASR6601SE QFN68 (8x8x0.9mm)
 
@@ -223,7 +248,7 @@ Pin Assignment of ASR6601SE QFN68 (8x8x0.9mm)
 
    <center>
 
-|image8|
+|image9|
 
 Pin Assignment of ASR6601CB QFN48 (6x6x0.9mm)
 
@@ -239,23 +264,21 @@ Pin Assignment of ASR6601CB QFN48 (6x6x0.9mm)
 3.1 Crystal Oscillator
 ~~~~~~~~~~~~~~~~~~~~~~
 
-|image9|
+|image10|
 
-Please refer to *Critical Material Recommendations* for details about recommended suppliers.
 
 3.2 RF Switch
 ~~~~~~~~~~~~~
 
-|image10|
+|image11|
 
-Please refer to *Critical Material Recommendations* for details about recommended suppliers.
 
 3.3 Power Inductor
 ~~~~~~~~~~~~~~~~~~
 
 If using DC-DC supplies power to the regulator (REG PA), the power inductor is a necessity. Please refer to the requirements of the power inductor in the following table.
 
-|image11|
+|image12|
 
 Please refer to *Critical Material Recommendations* for details about recommended suppliers.
 
@@ -289,7 +312,7 @@ Pay attention to the following aspects, regarding to the PCB RF routing as shown
 
    <center>
 
-|image12|
+|image13|
 
 .. raw:: html
 
@@ -331,8 +354,9 @@ Pay attention to the following aspects, regarding to the PCB crystal routing:
 .. |image6| image:: img/6601_Hardware/图2-6.png
 .. |image7| image:: img/6601_Hardware/图2-7.png
 .. |image8| image:: img/6601_Hardware/图2-8.png
-.. |image9| image:: img/6601_Hardware/图3-1.png
-.. |image10| image:: img/6601_Hardware/图3-2.png
-.. |image11| image:: img/6601_Hardware/图3-3.png
-.. |image12| image:: img/6601_Hardware/图4-1.png
+.. |image9| image:: img/6601_Hardware/图2-9.png
+.. |image10| image:: img/6601_Hardware/图3-1.png
+.. |image11| image:: img/6601_Hardware/图3-2.png
+.. |image12| image:: img/6601_Hardware/图3-3.png
+.. |image13| image:: img/6601_Hardware/图4-1.png
 
