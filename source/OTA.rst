@@ -68,19 +68,24 @@ Homepage: http://www.asrmicro.com/asrweb/
 1.1 Hardware
 ~~~~~~~~~~~~
 
-Hardware requirements are as follows:
- -  2 ASR6601 development boards
- -  2 antennas
- -  2 USB cable
- -  1 USB converter
- -  1 Android cellphone,
-    and the Android phone models verified by ASR are as follows:    
-     -  HUAWEI Mate 20 Pro, Android 10, EMUI 11.0.0
-     -  HUAWEI nova, Android 10, EMUI 11.0.0
-     -  HUAWEI Maimang 6, Android 8, EMUI 8.0.0
-     -  Xiaomi MIX 2S, Android 9, MIUI 11.0.3
+Hardware requirements are as follows:\
 
- -  1 PC
+-  2 ASR6601 development boards
+
+-  2 antennas
+
+-  2 USB cable
+
+-  1 USB converter
+
+-  1 Android cellphone, and the Android phone models verified by ASR are as follows: \
+   
+   -  HUAWEI Mate 20 Pro, Android 10, EMUI 11.0.0
+   -  HUAWEI nova, Android 10, EMUI 11.0.0
+   -  HUAWEI Maimang 6, Android 8, EMUI 8.0.0
+   -  Xiaomi MIX 2S, Android 9, MIUI 11.0.3
+
+-  1 PC
 
 |image1|
 
@@ -201,7 +206,7 @@ Explanations about the red marks illustrated above:
 
 -  Red **4**: this button is used to start OTA upgrade.
 
-​
+
 
 2.3 Select the Upgrade File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
