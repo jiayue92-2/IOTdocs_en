@@ -219,11 +219,11 @@ Pay close attention to the following aspects, regarding to ASR6601 chip RF circu
 
 \3. XMSSJR6G0BA uses single-end controlled mode. Pin6 is the DIO2 received by CTRL signal of TRSW. DIO’s controlling logics are as following. Please note that different RFSWs have different controlling logics and pins, which are defined in the corresponding datasheets of RFSW.
 
- a. When DIO2 is high, RF2àTX
+ a. When DIO2 is high, RF2 -> TX
 
- b. When DIO2 is low, RF1àRX
+ b. When DIO2 is low, RF1 -> RX
 
-\4. GPIO10 connects the VDD pin of TRSW. When ASR6601 works normally, GPIO is high. When ASR6601 is in sleep mode, GPIO is pulled down to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5 uA electric leakage). If the power consumption is not sensitive, GIPO can be used in other ways by connecting VDD_RF to VDD of RFSW.
+\4. GPIO10 connects the VDD pin of TRSW. When ASR6601 works normally, GPIO is high. When ASR6601 is in sleep mode, GPIO is pulled down to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5 uA electric leakage). If the power consumption is not sensitive, GPIO can be used in other ways by connecting VDD_RF to VDD of RFSW.
 
 \5. ASR suggest using XMSSJR6G0BA for RFSW. Users can use replaceable materials and adjust the parameters in RF matching network. For further details, please refer to *Chapter 3: Material Selection*.
 
