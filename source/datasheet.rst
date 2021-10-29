@@ -284,9 +284,10 @@ RF Input Power Pin              +10  dBm
 
 |image5|
 
-**Notes:** 
-*1. IDD_Standby and IDD_Stop3 are tested at 25 degrees and the RCO32K is used as the RTC clk.*
-*2. The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601_Harware Design Guide_V1.3.0. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.*
+**Notes:**
+
+1. IDD_Standby and IDD_Stop3 are tested at 25 degrees and the RCO32K is used as the RTC clk.\
+2. The XO32K block operates either in its normal mode or low-power mode. Through the proper design of XO32K PCB routing, the XO32K can work in its low-power mode, and in this case, the IDD current with the XO32K clk is as low as that with the RCO32K clk. For more details, please refer to ASR6601_Harware Design Guide_V1.3.0. Otherwise, the XO32K block shall only work in the normal mode, and the current will increase about 500nA compared with the low-power mode.
 
 
 4. Package and Pin Definition
