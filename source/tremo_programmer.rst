@@ -6,7 +6,7 @@ Introduction
 
 **About This Document**
 
-This document mainly introduces the download tool *Tremo Programmer* for the developers to use the tool to download to the Flash of LPWAN SoC ASR6601.
+This document mainly introduces the Tremo Programmer Tool for developers to download files into the Flash of LPWAN SoC ASR6601.
 
 **Included Chip Models**
 
