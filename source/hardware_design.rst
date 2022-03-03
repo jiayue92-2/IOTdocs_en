@@ -108,7 +108,7 @@ This document is a guide for ASR6601 hardware design, including the schematic de
 
 |image3|
 
-Pay close attention to the following aspects, regarding ASR6601 module reference design:
+Pay close attention to the following aspects regarding ASR6601 module reference design:
 
 \1. The default of the matching network is 470 MHz in the reference circuit. If you need any other matching network, please refer to *ASR6601_Matching_V1.0*.
 
@@ -211,7 +211,7 @@ ASR6601 Demo module uses two crystal oscillators:
 
 |image7|
 
-Pay close attention to the following aspects, regarding to ASR6601 chip RF circuit:
+Pay close attention to the following aspects regarding to ASR6601 chip RF circuit:
 
 \1. Please adjust the parameters of the RF based on the default parameters to optimize the RF performance, since clients’ PCB layout and wiring are various.
 
@@ -223,7 +223,7 @@ Pay close attention to the following aspects, regarding to ASR6601 chip RF circu
 
  b. When DIO2 is low, RF1 -> RX
 
-\4. GPIO10 connects the VDD pin of TRSW. When ASR6601 works normally, GPIO is high. When ASR6601 is in sleep mode, GPIO is pulled down to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5 uA electric leakage). If the power consumption is not sensitive, GPIO can be used in other ways by connecting VDD_RF to VDD of RFSW.
+\4. GPIO10 connects the VDD pin of TRSW. When ASR6601 works normally, GPIO is high. When ASR6601 is in sleep mode, GPIO is pulled down to turn off the TRSW to prevent TRSW electric leakage (XMSSJR6G0BA may have 5-μA electric leakage). If the power consumption is not sensitive, GPIO can be used in other ways by connecting VDD_RF to VDD of RFSW.
 
 \5. ASR suggest using XMSSJR6G0BA for RFSW. Users can use replaceable materials and adjust the parameters in RF matching network. For further details, please refer to *Chapter 3: Material Selection*.
 
@@ -293,7 +293,7 @@ The impedance performance has significant influence on the results in the distan
 4.1 Power Supply Routing
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pay attention to the following aspects, regarding to the PCB power supply routing:
+Pay attention to the following aspects regarding the PCB power supply routing:
 
 \1. You had better use capacitor filters of 2.2 uF and 0.1 uF as power supply, which can filter out low-frequency and high-frequency noise.
 
@@ -306,7 +306,7 @@ Pay attention to the following aspects, regarding to the PCB power supply routin
 4.2 RF Routing
 ~~~~~~~~~~~~~~
 
-Pay attention to the following aspects, regarding to the PCB RF routing as shown in the figure below:
+Pay attention to the following aspects regarding the PCB RF routing shown in the figure below:
 
 \1. RF matching components should be placed as close to the chip as possible.
 
@@ -335,7 +335,7 @@ Pay attention to the following aspects, regarding to the PCB RF routing as shown
 4.3 Crystal Routing
 ~~~~~~~~~~~~~~~~~~~
 
-Pay attention to the following aspects, regarding to the PCB crystal routing:
+Pay attention to the following aspects regarding the PCB crystal routing:
 
 \1. The clock of crystal must be in the top layer. Do not do it trans-layer or crossly. Use GND shielding.
 
