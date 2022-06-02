@@ -22,27 +22,27 @@ The product models corresponding to this document are as follows.
 
 **Copyright Notice**
 
-© 2021 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any languages in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
+© 2022 ASR Microelectronics Co., Ltd. All rights reserved. No part of this document can be reproduced, transmitted, transcribed, stored, or translated into any language in any form or by any means without the written permission of ASR Microelectronics Co., Ltd.
 
 **Trademark Statement**
 
 ASR and ASR Microelectronics Co., Ltd. are trademarks of ASR Microelectronics Co., Ltd. 
 
-Other trade names, trademarks and registered trademarks mentioned in this document are property of their respective owners.
+Other trade names, trademarks, and registered trademarks mentioned in this document are the property of their respective owners and are hereby declared.
 
 **Disclaimer**
 
-ASR do not give any warranty of any kind and may make improvements and/or changes in this document or in the product described in this document at any time.
+ASR does not give any warranty of any kind and may make improvements and/or changes in this document or in the product described in this document at any time.
 
 This document is only used as a guide, and no contents in the document constitute any form of warranty. Information in this document is subject to change without notice.
 
-All liability, including liability for infringement of any proprietary rights caused by using the information in this document is disclaimed.
+All liability, including liability for infringement of any proprietary rights caused by using the information in this document, is disclaimed.
 
 **ASR Microelectronics Co., Ltd.**
 
 Address: 9F, Building 10, No. 399 Keyuan Road, Zhangjiang High-tech Park, Pudong New Area, Shanghai, 201203, China
 
-Homepage: http://www.asrmicro.com/asrweb/
+Homepage: http://www.asrmicro.com/
 
 **Revision History**
 
@@ -61,6 +61,10 @@ Homepage: http://www.asrmicro.com/asrweb/
 +----------+-------------+--------------------------------------------------------------------+
 | 2021.05  | V1.2.0      | Modified Chapter 3 to simplify the compilation process.            |
 +----------+-------------+--------------------------------------------------------------------+
+| 2022.06  | V1.3.0      | Updated access to ASR SDK and GCC toolchain.                       |
++----------+-------------+--------------------------------------------------------------------+
+
+
 
 1. Hardware Preparation
 -----------------------
@@ -187,23 +191,32 @@ SWD Interfaces
 When using Jlink, ASR6601 needs 4 wires. Connect the interface 1, 7, 9 and 20 of Jlink to the corresponding pins on the board.
 
 2.2 SDK Acquisition
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please contact ASR technical support engineers.
+You can contact ASR technical support engineers to get SDK or download it from GitHub using the following command.
+
+``git clone https://github.com/asrlora/asr_lora_6601.git``
+
 
 2.3 Keil Project File Generation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is no Keil project file in SDK. Developers can run *keil.bat* in example project folder to generate it.
 
-2.4 GCC Tool Chains Config
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.4 GCC Tool Chains Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(1) Decompress the tool chains under *\\tools\\toolchain* directory in SDK.
+(1) Download the GNU Arm Embedded Toolchain zip file from the link below, and then unzip it.
+    https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-win32.zip
+\
 
-(2) Set GCC tool chains according to the Keil user guide from the below link: https://www.keil.com/support/man/docs/uv4/uv4_gnucomp.htm
+(2) Set GCC tool chains according to the Keil user guide from the below link: 
+    https://www.keil.com/support/man/docs/uv4/uv4_gnucomp.htm
+\
 
-(3) Set “Tool Base Folder” to the directory of the decompressed tool chains, for example, D:\\ASR6601_rel\\tools\\toolchain
+(3) Set “Tool Base Folder” to the directory of the decompressed tool chains, for example, 
+    D:\\ASR6601_rel\\tools\\toolchain
+\
 
 |image4|
 
@@ -261,7 +274,7 @@ Run the following command to install Python and other necessary software:
 
 (2) **Install Related Software**
 
-    Open MSYS2, then install software: ``pacman -S git vim make unzip python python-pip``
+    Open MSYS2, then install software: ``pacman -S git vim make unzip python python-pip wget``
 
     Use pip to install Pyserial: ``pip install pyserial configparser``
 
@@ -270,7 +283,10 @@ Run the following command to install Python and other necessary software:
 3.1.2 SDK Acquisition
 ^^^^^^^^^^^^^^^^^^^^^
 
-Please contact ASR technical support engineers.
+You can contact ASR technical support engineers to get SDK or download it from GitHub using the following command.
+
+``git clone https://github.com/asrlora/asr_lora_6601.git``
+
 
 .. _compilation-and-download-1:
 
