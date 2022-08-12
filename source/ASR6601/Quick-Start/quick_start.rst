@@ -220,7 +220,7 @@ There is no Keil project file in SDK. Developers can run *keil.bat* in example p
 
 First, copy the *ASR6601.FLM* file under *\\tools\\FLM* directory to *Flash* directory within Keil, for example, C:\\Keil_v5\\ARM\\Flash.
 
-If the flash failed, please edit the configurations on the Flash Download tab according to the Keil user guide from the below link: https://www.keil.com/support/man/docs/uv4/uv4_fl_dlconfiguration.htm
+If the download failed, please edit the configurations on the Flash Download tab according to the Keil user guide from the below link: https://www.keil.com/support/man/docs/uv4/uv4_fl_dlconfiguration.htm
 
 Mainly configure the following items:
 
