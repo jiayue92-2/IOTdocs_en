@@ -89,7 +89,7 @@ This document is a guide for ASR6601 hardware design, including the schematic de
 -  Embedded LD, TD, VD and FD
 -  Supports AES, DES, RSA, ECC, SHA and SM2/3/4
 
-2.3 ASR6601 Module Schemtic
+2.3 ASR6601 Module Schematic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2.3.1 ASR6601CB QFN48 Module Schematic
