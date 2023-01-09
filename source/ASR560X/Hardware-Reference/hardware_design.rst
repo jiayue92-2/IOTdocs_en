@@ -45,7 +45,7 @@ All liability, including liability for infringement of any proprietary rights ca
 ======== =========== =============================================
 **Date** **Version** **Release Notes**
 ======== =========== =============================================
-2022.07  V1.9.0      Added Section 6.4: P27/P28/P29 GPIO Function.
+2022.12  V2.0.0      Updated Section 2.7: Reset Pin.
 ======== =========== =============================================
 
 1. Overview
@@ -246,7 +246,11 @@ CX Bypass Capacitor
 2.7 Reset Pin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The reset pin has an internal pull-up resistor. It will automatically be pulled up internally after the chip is powered on, or it can be controlled by an external host IO. If external control is not required, keep the test point for the reset pin.
+RSTN is the reset pin of the chip, and is active low. It has an internal 25K ohm pull-up resistor, which will be automatically pulled up after the chip is powered on.
+
+When the RSTN pin is not controlled by an external MCU or other circuits, reserve the external pull-up and capacitor-to-ground reset circuits, as well as the RSTN test point on the PCB, and there is no need to assemble any components on the reset circuits.
+
+When the RSTN pin is controlled by an external MCU, we recommend that the RSTN pin be assembled with a 51K ohm pull-up resistor.
 
 .. raw:: html
 
