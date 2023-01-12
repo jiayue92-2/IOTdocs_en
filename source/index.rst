@@ -5,6 +5,20 @@ ASR Docs Page
 This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT products.
 
 
+Wi-Fi Chips
+--------------------------------
+
+==================  ==================  ================== 
+|ASR550X SoC|_               
+------------------  ------------------  ------------------
+`ASR550X SoC`_                
+==================  ==================  ==================
+
+.. |ASR550X SoC| image:: img/10.png
+.. _ASR550X SoC: ASR550X/index.html
+\
+
+
 BT/BLE Chips
 --------------------------------
 
@@ -16,7 +30,7 @@ BT/BLE Chips
 
 .. |ASR560X SoC| image:: img/01.png
 .. _ASR560X SoC: ASR560X/index.html
-\
+
 
 
 LPWAN Chips
@@ -37,6 +51,18 @@ LPWAN Chips
    :caption: Language
    
    简体中文 <https://asriot-cn.readthedocs.io/zh/latest/>
+
+.. toctree::
+   :hidden:
+   :caption: ASR550X
+   
+   ASR550X/Datasheet/index
+   ASR550X/Hardware-Reference/index
+   ASR550X/Download-Tool/index
+   ASR550X/Demo-Project/index
+   ASR550X/Quick-Start/index
+   ASR550X/FAQ/index
+   ASR550X/Certification/index
 
 .. toctree::
    :hidden:
