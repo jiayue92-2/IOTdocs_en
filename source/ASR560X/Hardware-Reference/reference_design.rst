@@ -1,6 +1,6 @@
 ASR560X Series Reference Design 
 ====================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/硬件介绍/最简参考设计.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/硬件介绍/参考设计.html>`_
 
 
 1. ASR560X QFN48 Reference Design
