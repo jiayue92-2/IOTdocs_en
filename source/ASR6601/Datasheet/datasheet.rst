@@ -697,13 +697,13 @@ GPIO62   GPIO_PORTD_14 LPTIM_IN2   LPUART_RX  LPTIM_ETR
 +----------+------------+-------------+----------------+--------------+------------------------------+
 
 
-.. |image1| image:: ../../img/6601_规格书/图1-1.png
-.. |image2| image:: ../../img/6601_规格书/表1-2.png
-.. |image3| image:: ../../img/6601_规格书/图2-1.png
-.. |image4| image:: ../../img/6601_规格书/表3-3.png
-.. |image5| image:: ../../img/6601_规格书/表3-4.png
-.. |image6| image:: ../../img/6601_规格书/表3-5.png
-.. |image7| image:: ../../img/6601_规格书/图4-1.png
-.. |image8| image:: ../../img/6601_规格书/图4-2.png
-.. |image9| image:: ../../img/6601_规格书/图4-3.png
-.. |image10| image:: ../../img/6601_规格书/图4-4.png
+.. |image1| image:: ../../img/6601_DS/图1-1.png
+.. |image2| image:: ../../img/6601_DS/表1-2.png
+.. |image3| image:: ../../img/6601_DS/图2-1.png
+.. |image4| image:: ../../img/6601_DS/表3-3.png
+.. |image5| image:: ../../img/6601_DS/表3-4.png
+.. |image6| image:: ../../img/6601_DS/表3-5.png
+.. |image7| image:: ../../img/6601_DS/图4-1.png
+.. |image8| image:: ../../img/6601_DS/图4-2.png
+.. |image9| image:: ../../img/6601_DS/图4-3.png
+.. |image10| image:: ../../img/6601_DS/图4-4.png
