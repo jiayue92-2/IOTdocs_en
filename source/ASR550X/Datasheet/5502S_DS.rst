@@ -56,11 +56,11 @@ Homepage: http://www.asrmicro.com/
 
 **Revision History**
 
-======= ======= =======================================
+======= ======= ===================================================
 Date    Version Release Notes
-======= ======= =======================================
+======= ======= ===================================================
 2022.02 V2.7.1  Updated Figure 6-1.
-======= ======= =======================================
+======= ======= ===================================================
 
 1. Overview
 -----------
@@ -243,9 +243,9 @@ Hardware configuration parameters including Flash-Encryption may be stored in fi
 
 The following table describes the various MCU peripherals and how they are mapped to the processor memory.
 
-================== ============= ===========
+================== ============= ==================
 Description        Start Address                    End Address
-================== ============= ===========
+================== ============= ==================
 ROM                0x0000_0000                      0x0000_5FFF
 SRAM               0x0800_0000                     0x0803_FFFF
 FLASH              0x1000_0000                     0x17FF_FFFF
@@ -274,12 +274,11 @@ CACHE_CFG          0x4001_C000               0x4001_CFFF
 CYPT310_CFG        0x4001_D000               0x4001_DFFF
 Share mem          0x6000_0000                0x607F_FFFF
 MAC/PHY            0x6080_0000                 0x61FF_FFFF
-================== ============= ===========
+================== ============= ==================
 
 
 2.5 Peripherals
 ~~~~~~~~~~~~~~~
-
 The following table gives a summary of all peripherals of ASR5502S.
 
 |image2|
@@ -442,7 +441,6 @@ The Watch Dog Timer is used to resume the controller operation when it had been 
 Crypto Engine block is an integrated security core and provides a comprehensive security infrastructure that enables system wide protection that includes use cases inside and outside the device.
 
 Function features are shown in below table.
-
 |image3|
 
 3. Wi-Fi Subsystem Descriptions
@@ -675,7 +673,7 @@ ASR5502S Pin Descriptions
 
 Take ASR5502S as an example, the reference PCB design is shown in following diagram.
 
-The chip is powered by single supply input "VCC" with range from 3.3~5 V. The inside PMU can generate 1.2/1.8/3.3 V voltage for the core function circuits and digital IO voltage. There is no need of other PMU IC, but just total 9 passive LC devices.
+The chip is powered by single supply input "VCC" with range from 3.3~5 V. The inside PMU can generate 1.2/1.8 V voltage for the core function circuits, and 3.3 V for the digital IO. It should be noted that 3.3 V voltage is generated for DIG_PAD_12/13 and PAD_RSTN/PAD_SEL IO pins by default. There is no need of other PMU IC, but just total 9 passive LC devices.
 
 |image10|
 
