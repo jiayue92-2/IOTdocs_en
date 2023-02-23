@@ -6,8 +6,8 @@ ASR550X Datasheet
    :maxdepth: 2
 
     ASR5502A&5502C Datasheet <https://drive.google.com/file/d/1pnHqPWA-lmK_V-TaloTfUodNfvZkLr9G/view?usp=sharing>
-    ASR5502S Datasheet <5502_DS>
-    ASR5505S Datasheet <5505_DS>
+    ASR5502S Datasheet <5502S_DS>
+    ASR5505S Datasheet <5505S_DS>
 
 
 
