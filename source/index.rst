@@ -96,5 +96,4 @@ LPWAN Chips
 -  Address: 9F, Building 10, No. 399 Keyuan Road, Zhangjiang High-tech Park, Pudong New Area, Shanghai, 201203, China
 -  Homepage: http://www.asrmicro.com/
 
-For brief introduction on ASR company and IoT BU products, please refer to:
-    ASR Brochure<https://drive.google.com/file/d/1snTxMkL_mYpsrZE8ypofO8pdpkhYfZ-j/view?usp=sharing>
+For brief introduction on ASR company and IoT BU products, please refer to `ASR Brochure <https://drive.google.com/file/d/1snTxMkL_mYpsrZE8ypofO8pdpkhYfZ-j/view?usp=sharing>`_ .
