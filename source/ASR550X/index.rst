@@ -2,7 +2,7 @@ ASR550X
 =======================
 `简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR550X/index.html>`_
 
-This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 550X series products.
+This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 550X series products. You can also download the PDF version by clicking `550X Series Documents <https://pan.baidu.com/s/1dh1oZXEjqq8PC0bEQk_zcA?pwd=wf9s>`_ .
 
 
 =======================  =======================  =======================
