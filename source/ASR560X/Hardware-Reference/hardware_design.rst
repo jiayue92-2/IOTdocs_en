@@ -45,7 +45,7 @@ All liability, including liability for infringement of any proprietary rights ca
 ======== =========== =============================================
 **Date** **Version** **Release Notes**
 ======== =========== =============================================
-2022.12  V2.0.0      Updated Section 2.7: Reset Pin.
+2023.04  V2.1.0      Updated Section 2.5: Crystal and Section 2.7: Reset Pin.
 ======== =========== =============================================
 
 1. Overview
@@ -192,7 +192,7 @@ Internal Power Pins Connected to VDCOUT
 
 It is recommended to use 16 MHz (or 32 MHz), 10 ppm and 9 pF crystals. For example, the ASR560X demo board uses HOSONIC E3FB16E007900E crystal.
 
-The 32.768 kHz crystal is optional. ASR560X has a built-in 32.768 kHz RC oscillator (within ±200 ppm accuracy by software calibration). If the application scenario requires high accuracy (like ±20 ppm), an external RTC crystal is preferable, such as the HOSONIC ETST00327000KE crystal used in the demo board.
+The 32.768 kHz crystal is optional. ASR560X has a built-in 32.768 kHz RC oscillator (within ±200 ppm accuracy by software calibration). If the application scenario requires high accuracy (like ±20 ppm), an external RTC crystal is preferable, such as the HOSONIC ETST003277900E crystal used in the demo board.
 
 .. raw:: html
 
@@ -201,6 +201,18 @@ The 32.768 kHz crystal is optional. ASR560X has a built-in 32.768 kHz RC oscilla
 |image9|
 
 Crystal Schematic
+
+.. raw:: html
+
+   </center>
+
+.. raw:: html
+
+   <center>
+
+|image10|
+
+Crystal Specification
 
 .. raw:: html
 
@@ -215,7 +227,7 @@ The surface layer under the crystal should be kept clean. Make sure no traces ar
 
    <center>
 
-|image10|
+|image11|
 
 Crystal Layout
 
@@ -234,7 +246,7 @@ CX1 and CX2 are the bypass pins of the internal charge pump of the chip. A 0.1 �
 
    <center>
 
-|image11|
+|image12|
 
 CX Bypass Capacitor
 
@@ -246,17 +258,15 @@ CX Bypass Capacitor
 2.7 Reset Pin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-RSTN is the reset pin of the chip, and is active low. It has an internal 25K ohm pull-up resistor, which will be automatically pulled up after the chip is powered on.
+The RESET pin has an internal 25K pull-up resistor, which will be pulled up automatically after the VBATB is powered up.The chip also has integrated a delay circuit. When the VBATB is powered up to 1.7 V, there is an 8 ms delay before the SoC sreally starts up.
 
-When the RSTN pin is not controlled by an external MCU or other circuits, reserve the external pull-up and capacitor-to-ground reset circuits, as well as the RSTN test point on the PCB, and there is no need to assemble any components on the reset circuits.
-
-When the RSTN pin is controlled by an external MCU, we recommend that the RSTN pin be assembled with a 51K ohm pull-up resistor.
+In the scenario of rapid and repeated power up and down, users need to add a diode fast discharge circuit based on the general RC reset circuit to ensure that the RESET pin level can be powered down at the same time as VBATB.These circuit can keep the reset avilable when it is in the scenario. The recommended reset circuit is as follows:
 
 .. raw:: html
 
    <center>
 
-|image12|
+|image13|
 
 RESET Pin
 
@@ -264,6 +274,15 @@ RESET Pin
 
    </center>
 
+The recommended circuit parameters are: 51 KΩ, 100 pF, IN4148.
+
+Users can make some adjustments to this circuit depending on the application scenario, such as:
+
+1. in application scenarios where the VBATB is not repeatedly and rapidly powered up and down, the diode can be left unsoldered;
+
+2. in scenarios where the RESET pin is not controlled by other circuits, no components need to be soldered, but it is recommended to reserve the footprint of three component for debugging;
+
+3. in the scenario where the RESET pin is controlled by other circuits, only the 51 K pull-up resistors can be soldered.
 
 
 3. RF Front-end Design
@@ -280,7 +299,7 @@ It should be noted that **the values of the components in the first π-type netw
 
    <center>
 
-|image13|
+|image14|
 
 .. raw:: html
 
@@ -294,7 +313,7 @@ It should be noted that **the values of the components in the first π-type netw
 
    <center>
 
-|image14|
+|image15|
 
 .. raw:: html
 
@@ -310,7 +329,7 @@ The matching circuitry should be placed as close as possible to the RF pin of th
 
    <center>
 
-|image15|
+|image16|
 
 .. raw:: html
 
@@ -330,7 +349,7 @@ ASR560X supports two common MIC connection methods: differential and single-ende
 
    <center>
 
-|image16|
+|image17|
 
 MIC Circuit
 
@@ -345,7 +364,7 @@ If the MIC noise is critical, an external LDO can be added close to the MIC to r
 
    <center>
 
-|image17|
+|image18|
 
 MIC Circuit (Powered by External LDO)
 
@@ -360,7 +379,7 @@ When using the MIC function, a 470 nF filter capacitor needs to be placed as clo
 
    <center>
 
-|image18|
+|image19|
 
 VMICTM Pin
 
@@ -385,7 +404,7 @@ In addition to the normal key matrix, the ADC function pin can be used as key in
 
    <center>
 
-|image19|
+|image20|
 
 ADC Key Circuit Example
 
@@ -616,11 +635,12 @@ When the IOs are configured as USB_DP/DM alternate function pins, the PCB trace 
 .. |image10| image:: ../../img/560X_Hardware/图2-8.png
 .. |image11| image:: ../../img/560X_Hardware/图2-9.png
 .. |image12| image:: ../../img/560X_Hardware/图2-10.png
-.. |image13| image:: ../../img/560X_Hardware/图3-1.png
-.. |image14| image:: ../../img/560X_Hardware/图3-2.png
-.. |image15| image:: ../../img/560X_Hardware/图3-3.png
-.. |image16| image:: ../../img/560X_Hardware/图4-1.png
-.. |image17| image:: ../../img/560X_Hardware/图4-2.png
-.. |image18| image:: ../../img/560X_Hardware/图4-3.png
-.. |image19| image:: ../../img/560X_Hardware/图5-1.png
+.. |image13| image:: ../../img/560X_Hardware/图2-11.png
+.. |image14| image:: ../../img/560X_Hardware/图3-1.png
+.. |image15| image:: ../../img/560X_Hardware/图3-2.png
+.. |image16| image:: ../../img/560X_Hardware/图3-3.png
+.. |image17| image:: ../../img/560X_Hardware/图4-1.png
+.. |image18| image:: ../../img/560X_Hardware/图4-2.png
+.. |image19| image:: ../../img/560X_Hardware/图4-3.png
+.. |image20| image:: ../../img/560X_Hardware/图5-1.png
 
