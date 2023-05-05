@@ -1,5 +1,6 @@
 ASR560X Series Datasheet
 ===============================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/芯片规格/index.html>`_
 
 
 .. toctree::
