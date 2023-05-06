@@ -5,7 +5,7 @@ ASR550X Datasheet
 .. toctree::
    :maxdepth: 2
 
-    ASR5502A&5502C Datasheet <https://drive.google.com/file/d/1pnHqPWA-lmK_V-TaloTfUodNfvZkLr9G/view?usp=sharing>
+    ASR5502A Datasheet <https://drive.google.com/file/d/18q8eMEeBt6M8HkQvctYoyIFT-h8euw6m/view?usp=sharing>
     ASR5502S Datasheet <5502S_DS>
     ASR5505S Datasheet <5505S_DS>
 
