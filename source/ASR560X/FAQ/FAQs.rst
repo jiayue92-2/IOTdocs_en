@@ -70,7 +70,7 @@ Date    Version Release Notes
 1.1 How to download the firmware to the development board?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please refer to *ASR560X Series_Development Board User’s Guide* <https://drive.google.com/file/d/1ie_yM-ItQ5_PIh5NClD7macu2FYobJXd/view>`_.
+Please refer to `*ASR560X Series_Development Board User’s Guide* <https://drive.google.com/file/d/1ie_yM-ItQ5_PIh5NClD7macu2FYobJXd/view>`_.
 
 1.2 Why is there “1F2E3D81” when downloading?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,12 +109,12 @@ The flash can be erased using the DOGO tool, referring to the steps in the follo
 2.1 Does it support development, compilation and debugging in the KEIL environment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Yes, it does. Please refer to *ASR560X Series_Development Environment Setup Guide* <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view>`_ for details.
+Yes, it does. Please refer to `*ASR560X Series_Development Environment Setup Guide* <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view>`_ for details.
 
 2.2 Does it support compilation in the Linux environment?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Yes, it does. Please refer to *ASR560X Series_Development Environment Setup Guide* <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view>`_ for the specific environment configuration.
+Yes, it does. Please refer to `*ASR560X Series_Development Environment Setup Guide* <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view>`_ for the specific environment configuration.
 
 2.3 Does it support versions other than GCC 5.4?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,7 +127,7 @@ No, it doesn’t. In the Windows environment, the *gcc-arm-none-eabi-5_4-2016q3-
 3.1 How is the chip’s built-in flash Layout divided?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\1. Please refer to section 3.1 Flash of *ASR560X Series_Developer Guide*.
+\1. Please refer to section 3.1 Flash of `*ASR560X Series_Developer Guide* <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view>`_. 
 
 \2. Please refer to the definition in the sonata_board.c file in the SDK.
 
