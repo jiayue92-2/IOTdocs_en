@@ -320,19 +320,19 @@ The capture input channel and PWM output channel of CAPn, PWM2n, and PWM2n+1 are
 
  a) When **Central** calls sonata_ble_gatt_write(), **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
 
-​ b) When **Central** calls sonata_ble_gatt_write_no_response(), **Peripheral** will not respond.
+ b) When **Central** calls sonata_ble_gatt_write_no_response(), **Peripheral** will not respond.
 
 \2. If the attribute of handle supports write command (PWC_NA):
 
-​ a) When **Central** calls sonata_ble_gatt_write(), **Peripheral** will return an error.
+ a) When **Central** calls sonata_ble_gatt_write(), **Peripheral** will return an error.
 
-​ b) When **Central** calls sonata_ble_gatt_write_no_response(), **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
+ b) When **Central** calls sonata_ble_gatt_write_no_response(), **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
 
 \3. If the attribute of handle supports both write request (PWR_NA) and write command (PWC_NA):
 
-​ a) When **Central** calls sonata_ble_gatt_write(), **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
+ a) When **Central** calls sonata_ble_gatt_write(), **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
 
-​ b) When **Central** calls sonata_ble_gatt_write_no_response, **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
+ b) When **Central** calls sonata_ble_gatt_write_no_response, **Peripheral** will enter the ble_gatt_callback->gatt_write_req() callback.
 
 \4. The application layer of peripheral should reply the application processing status to the BLE stack using the sonata_ble_gatt_send_write_confirm() API.
 
