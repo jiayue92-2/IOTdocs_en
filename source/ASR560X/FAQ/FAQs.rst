@@ -566,7 +566,7 @@ The BLE stack is blocked and cannot process BLE event.
 The message is sent to a null task.
 
 6.4 Why is there ASSERT ERROR: id= 3625?
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The task message is in the wrong state, out of predefined value, so it cannot be processed by the BLE stack. It is possible that the message queue crashed.
 
