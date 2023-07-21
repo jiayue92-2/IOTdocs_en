@@ -14,9 +14,9 @@ This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 550X se
 -----------------------  -----------------------  -----------------------
 `Demo Project`_          `Quick Start`_           `FAQ`_
 -----------------------  -----------------------  ----------------------- 
-|Certification|_            |Test Report and Guide|_  
+|Certification|_             
 -----------------------  -----------------------  ----------------------- 
-`Certification`_            `Test Report and Guide`_
+`Certification`_            
 =======================  =======================  =======================
 
 .. |Datasheet| image:: ../img/03.png
@@ -39,6 +39,3 @@ This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 550X se
 
 .. |Certification| image:: ../img/09.png
 .. _Certification: Certification/index.html
-
-.. |Test Report and Guide| image:: ../img/11.png
-.. _Test Report and Guide: Test-Report-and-Guide/index.html
