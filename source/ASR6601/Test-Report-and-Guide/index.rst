@@ -1,4 +1,4 @@
-ASR6601 Test Report&Guide
+ASR6601 Test Report and Guide
 ===============================
 `简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/测试报告及指南/index.html>`_
 
