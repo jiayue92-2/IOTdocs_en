@@ -60,6 +60,7 @@ LPWAN Chips
    ASR550X/Quick-Start/index
    ASR550X/FAQ/index
    ASR550X/Certification/index
+   ASR550X/Test Report&Guide/index
 
 .. toctree::
    :hidden:
@@ -72,6 +73,7 @@ LPWAN Chips
    ASR560X/Quick-Start/index
    ASR560X/FAQ/index
    ASR560X/Certification/index
+   ASR560X/Test Report&Guide/index
    
 .. toctree::
    :hidden:
@@ -84,7 +86,7 @@ LPWAN Chips
    ASR6601/Quick-Start/index
    ASR6601/FAQ/index
    ASR6601/Certification/index
-
+   ASR6601/Test Report&Guide/index
 
 **Contact us:**\
   

@@ -14,9 +14,9 @@ This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 6601 se
 -----------------------  -----------------------  -----------------------
 `Demo Project`_          `Quick Start`_           `FAQ`_
 -----------------------  -----------------------  ----------------------- 
-|Certification|_        	    |Test Report|_ 
+|Certification|_        	   |Test Report&Guide|_ 
 -----------------------  -----------------------  ----------------------- 
-`Certification`_             `Test Report`_
+`Certification`_             `Test Report&Guide`_
 =======================  =======================  =======================
 
 .. |Datasheet| image:: ../img/03.png
@@ -40,5 +40,5 @@ This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT 6601 se
 .. |Certification| image:: ../img/09.png
 .. _Certification: Certification/index.html
 
-.. |Test Report| image:: ../img/11.png
-.. _Test Report: Test Report/index.html
+.. |Test Report&Guide| image:: ../img/11.png
+.. _Test Report&Guide: Test Report&Guide/index.html
