@@ -12,13 +12,13 @@ This document introduces the differences in hardware and software between single
 
 The product models corresponding to this document are as follows:
 
-+-----------+-----------+----------+------------------------+---------------+---------------+
-| **Model**  | **Flash** | **SRAM** | **Core**               | **Package**      | **Frequency**      |
-+===========+===========+==========+========================+===============+===============+
-| ASR6601SE | 256 KB    | 64 KB    | 32-bit 48 MHz ARM STAR | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+-----------+----------+------------------------+---------------+---------------+
-| ASR6601CB | 128 KB    | 16 KB    | 32-bit 48 MHz ARM STAR | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+-----------+----------+------------------------+---------------+---------------+
++-----------+--------+-------+----------------------------------+---------------+---------------+
+| Model     | Flash  | SRAM  | Core                             | Package       | Frequency     |
++===========+========+=======+==================================+===============+===============+
+| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++-----------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++-----------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -43,7 +43,7 @@ All liability, including liability for infringement of any proprietary rights ca
 =================== ==================== ===============================================================
 **Date**              **Version**              **Release Notes**
 =================== ==================== ===============================================================
-2021.11             V1.0.0               First Release.
+2023.07             V1.0.0               First Release.
 =================== ==================== ===============================================================
 
 
@@ -177,20 +177,20 @@ In addition, the functions *SX126xAntSwOn* and *SX126xAntSwOff* in the sx1262-bo
 
 
 
-.. |image1| image:: ../../img/6601_RFSW/Figure 1-1.png
-.. |image2| image:: ../../img/6601_RFSW/Figure 1-2.png
-.. |image3| image:: ../../img/6601_RFSW/Figure 1-3.png
-.. |image4| image:: ../../img/6601_RFSW/Figure 1-4.png
-.. |image5| image:: ../../img/6601_RFSW/Figure 1-5.png
-.. |image6| image:: ../../img/6601_RFSW/Figure 1-6.png
-.. |image7| image:: ../../img/6601_RFSW/Figure 1-7.png
-.. |image8| image:: ../../img/6601_RFSW/Figure 1-8.png
-.. |image9| image:: ../../img/6601_RFSW/Figure 1-9.png
-.. |image10| image:: ../../img/6601_RFSW/Figure 1-10.png
-.. |image11| image:: ../../img/6601_RFSW/Figure 1-11.png
-.. |image12| image:: ../../img/6601_RFSW/Figure 1-12.png
-.. |image13| image:: ../../img/6601_RFSW/Figure 1-13.png
-.. |image14| image:: ../../img/6601_RFSW/Figure 1-14.png
-.. |image15| image:: ../../img/6601_RFSW/Figure 1-15.png
-.. |image16| image:: ../../img/6601_RFSW/Figure 1-16.png
-.. |image17| image:: ../../img/6601_RFSW/Figure 1-17.png
+.. |image1| image:: ../../img/6601_RFSW/图1-1.png
+.. |image2| image:: ../../img/6601_RFSW/图1-2.png
+.. |image3| image:: ../../img/6601_RFSW/图1-3.png
+.. |image4| image:: ../../img/6601_RFSW/图1-4.png
+.. |image5| image:: ../../img/6601_RFSW/图1-5.png
+.. |image6| image:: ../../img/6601_RFSW/图1-6.png
+.. |image7| image:: ../../img/6601_RFSW/图1-7.png
+.. |image8| image:: ../../img/6601_RFSW/图1-8.png
+.. |image9| image:: ../../img/6601_RFSW/图1-9.png
+.. |image10| image:: ../../img/6601_RFSW/图1-10.png
+.. |image11| image:: ../../img/6601_RFSW/图1-11.png
+.. |image12| image:: ../../img/6601_RFSW/图1-12.png
+.. |image13| image:: ../../img/6601_RFSW/图1-13.png
+.. |image14| image:: ../../img/6601_RFSW/图1-14.png
+.. |image15| image:: ../../img/6601_RFSW/图1-15.png
+.. |image16| image:: ../../img/6601_RFSW/图1-16.png
+.. |image17| image:: ../../img/6601_RFSW/图1-17.png
