@@ -55,7 +55,7 @@ All liability, including liability for infringement of any proprietary rights ca
    </center>
 
 
-2. Tool Introduction
+1. Tool Introduction
 --------------------
 
 The main interface of the ASR6601MultiProgrammer tool is shown in the figure below:
