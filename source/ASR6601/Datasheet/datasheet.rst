@@ -47,7 +47,7 @@ All liability, including liability for infringement of any proprietary rights ca
 ======= ======= ==================
 Date    Version Release Notes
 ======= ======= ==================
-2023.9 V1.7.0  Added chip models of ASR6601SER and ASR6601CBR and Section 3.6: RSTN Characteristics.
+2023.09 V1.7.0  Added chip models of ASR6601SER and ASR6601CBR and Section 3.6: RSTN Characteristics.
 ======= ======= ==================
 
 1. Overview
