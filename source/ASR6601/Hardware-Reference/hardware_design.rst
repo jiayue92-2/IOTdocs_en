@@ -114,7 +114,7 @@ This document is a guide for ASR6601 hardware design, including the schematic de
 Pay close attention to the following aspects regarding ASR6601 module reference design:
 
 1. With respect to the ASR6601 matching network, please refer to the ASR6601 module reference design in the *1_ASR6601_Hardware /13_ASR6601_Demo_Module* folder on the FTP server, which illustrates the matching networks of 490 MHz (applicable to the frequency range of 470-510 MHz) and 915 MHz (applicable to the frequency range of 864-928 MHz).
-2. The inductor L7 (15 uH) of DC-DC must be power inductor. Refer to `Chapter 3: Material Selection <#_Materials_Selection>`__ to get the details of the power inductor. We suggest you choose 0402 package for the inductor L1 (56 nH) of VR_PA, since its rated current is larger, which helps improve the transmit power of the TX.
+2. The inductor L7 (15 uH) of DC-DC must be power inductor. Refer to Chapter 3: Material Selection to get the details of the power inductor. We suggest you choose 0402 package for the inductor L1 (56 nH) of VR_PA, since its rated current is larger, which helps improve the transmit power of the TX.
 3. The R1, R2, R3, R4 and R7 in the schematics are mainly for testing. You can change or remove them accordingly.
 4. XO and TCXO are compatible in the ASR6601 module schematic. You can choose either one accordingly.
 5. In order to enhance ESD protection, we suggest reserving D1 and D2. D2 has some influence on RF performance, D2 (TVS) with small capacitance is prefered in applications with higher ESD requirements.
@@ -144,13 +144,21 @@ The RSTN reference circuit is shown below:
 
 |image5|
 
-【注意】
+.. attention::
+    1. The ASR6601CB/ASR6601SE RSTN can only be used as the input, not as the output.
+    2. It is recommended to add RC circuit on RSTN. The pull-up resistor value is recommended to be 4.7K~10K. The capacitance value ranges from 300 pF to 10 nF (330 pF is recommended).
+    3. The value of the capacitor at RSTN should not be too large. If it is increased to 1uF, the over-slow waveform at RSTN will trigger the chip’s internal protection mechanism, resulting in the erasure of the bootloader in the flash info area of the chip.
+    4. Ensure that the pull-up resistor is powered up at the same time as the chip. If the chip is powered up earlier than the pull-up resistor, an Intermediate level of RSTN signal will trigger the chip's internal protection mechanism, resulting in the erasure of the bootloader in the flash info area of the chip.
+    5. It is strongly recommended that the new VDDD, VDDA, and VDD_RF be connected to the same power supply to avoid different timing due to different power supplies, which will make the RSTN level intermediate and trigger the chip's internal protection mechanism, resulting in the erasure of the bootloader in the flash info area of the chip.
 
 The reset signal on the RSTN pin of the ASR6601CBR/ASR6601SER can only reset the Main domain and cannot reset the AON or AONR domain. The RSTN reset circuit reference design is as follows:
 
 |image6|
 
-【注意】
+.. attention::
+    1. The ASR6601CBR/SER RSTN can be used as an input and an output. When the RSTN is used as an output, it is usually connected to the nRST of an external chip to control the synchronous reset of external chips. When the RSTN is used as an output, the resistance value of the serial resistor in the RSTN circuit (as shown in Figure 2-6) must be 0 ohm.
+    2. It is recommended to add the RC circuit at RSTN, in which the pull-up resistor value is recommended to be 4.7K. The capacitance value ranges from 300 pF to 10 nF (330 pF is recommended).The reason for recommending to use the 47K pull-up resistor is as follows: When the GPIO is configured in push-pull mode, the low state of the GPIO is strongly low. The GPIO is connected to GND through a small resistor. The voltage value of the RSTN pin is the voltage obtained by dividing the VBAT voltage by the series resistor connected to the pull-up resistor. If the resistance value of the pull-up resistor at RSTN is too small, then the voltage value at RSTN will become an intermediate voltage, which will influence the reset of the ASR6601CBR/SER. Therefore, the pull-up resistor value should be much larger than the serial resistor value (4.7K for the serial resistor and 47K for the pull-up resistor).
+    3. RSTN is externally connected to a key switch or an external MCU GPIO. If the GPIO is configured in open-drain or push-pull output mode, a 4.7K resistor must be connected in series at RSTN for the following reasons: If the GPIO is configured in open-drain mode (strongly low level, weakly high level, pulled high by a pull-up resistor), this serial resistor can be shorted with a 0 ohm resistor. But if the GPIO is configured for push-pull mode (strongly low level, strongly high level), the serial resistor is a must. Because the RSTN pin can be used as both an input and an output, and the internal software reset output will not be pulled to low without the serial resistor. A 4.7K resistor in series with RSTN is recommended.
 
 2.4.3 BOOT Circuit
 ~~~~~~~~~~~~~~~~~~
@@ -190,7 +198,10 @@ ASR6601 Demo module uses two crystal oscillators:
 
 |image8|
 
-【注意】
+.. attention::
+    1. If the user needs to use LoRaWAN ClassB, or the bandwidth is lower than 62.5K, 32M TCXO must be used, otherwise, XO is applicable. 
+    2. The 32M crystal has to be placed as close as possible to the corresponding pins. Ensure the clearance of the top copper layer of the crystal to avoid increasing the frequency deviation due to heat conduction.
+    3. The 32.768K crystal has to be placed as close as possible to the corresponding pins, and the traces should be symmetrical to make the load balanced. When the 32.768K crystal works in its low-power mode, the unbalanced load on each end of the crystal may cause itself to stop working. 
 
 2.4.5 RF Matching
 ~~~~~~~~~~~~~~~~~
@@ -283,8 +294,6 @@ Pay attention to the following aspects regarding the PCB RF routing shown in the
 
 (b) Match the differential 100 ohms impedance on RFI_N and RFI_P RF traces (See green traces in the following Figure).
 
-​
-
 |image16|
 
 4.3 Crystal Routing
@@ -299,7 +308,15 @@ Pay attention to the following aspects regarding the PCB crystal routing:
 5. Ensure the clearance of the top copper layer of the crystal to prevent temperature drift due to heat conducted from surrounding components.
 6. The 32.768K crystal should be symmetrically routed to balance the load, as shown in the following figure.
 
+.. raw:: html
+
+   <center>
+
 |image17|
+
+.. raw:: html
+
+   </center>
 
 A. Appendix - Reference
 =======================
@@ -308,11 +325,11 @@ Summaries of the reference information mentioned in this document:
 
 1. ASR6601 FTP information
 
-*Serv\ *\ **：**\ *\ iot.asrmicro.com:8090*
+Serv: iot.asrmicro.com:8090
 
-*User\ *\ **：**\ *\ ASR6601_delivery*
+User: ASR6601_delivery
 
-*Pass\ *\ **：**\ *\ U6H3bfAs*
+Pass: U6H3bfAs
 
 2. E-mail for ASR6601 technical support:
 
