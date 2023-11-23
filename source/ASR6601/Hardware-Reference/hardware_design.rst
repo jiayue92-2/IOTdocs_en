@@ -2,7 +2,7 @@
 =================================
 
 Introduction
-============
+------------
 
 **About this Document**
 
@@ -67,7 +67,7 @@ Homepage: http://www.asrmicro.com/
 +---------+---------+----------------------------------------------------------------------------------------------------+
 
 1. Overview
-===========
+-----------
 
 ASR6601 is a general LPWAN Wireless Communication SoC, with integrated RF Transceiver, Modem and a 32-bit RISC MCU. The Modem supports LoRa modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. The Modem also supports BPSK modulation in TX and (G)MSK modulation in TX and RX. The MCU uses Arm China STAR-MC1 Processor, with 48-MHz operation frequency, supports 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x 12-bit SAR ADC, 1 x 12-bit DAC, etc.
 
@@ -76,15 +76,15 @@ Continuous frequency coverage from 150 MHz to 960 MHz allows the support of all 
 This document is a guide for ASR6601 hardware design, including the schematic design, layout notes, and suggestions to critical materials selection.
 
 2. ASR6601 Schematic Design
-===========================
+---------------------------
 
 2.1 ASR6601 Block Diagram
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image1|
 
 2.2 ASR6601 Features
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 -  Up to 42 configurable GPIOs: 3 x I2C, 1 x I2S, 4 x UART, 1 x LPUART, 1 x SWD, 3 x SPI, 1 x QSPI and 2 x WDG
 -  4 x GPtimer, 2 x Basic Timer, 2 x LP timer and 1 x Sys Ticker
@@ -99,15 +99,15 @@ This document is a guide for ASR6601 hardware design, including the schematic de
 -  Supports AES, DES, RSA, ECC, SHA and SM2/3/4
 
 2.3 ASR6601 Module Schemtic
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2.3.1 ASR6601 QFN48 Module Schematic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image2|
 
 2.3.2 ASR6601 QFN68 Module Schematic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image3|
 
@@ -122,10 +122,10 @@ Pay close attention to the following aspects regarding ASR6601 module reference 
 7. Users can log in to the ASR FTP server to find the module reference design schematics and layout files. Please refer to Appendix.
 
 2.4 Key Circuits Analysis
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2.4.1 Power Supply
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 There are four parts of ASR6601 power: *VBAT_ESDx (x=0-3), VBAT_ANA, VBAT_RTC and VBAT_RF*. *VBAT_ESDx* supplies power to the digital part of MCU. *VBAT_ANA* supplies power to the analog part (ADC) of MCU. *VBAT_RF* supplies power to the LoRa tranceiver. *VBAT_RTC* supplies power to the RTC clock of MCU.
 
@@ -136,7 +136,7 @@ Refer to the following figures for the power supply scheme of ASR6601 MCU and RF
 |image4|
 
 2.4.2 Reset Circuit
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 The reset signal on the RSTN pin of ASR6601CB/ASR6601SE resets the chip.
 
@@ -161,14 +161,14 @@ The reset signal on the RSTN pin of the ASR6601CBR/ASR6601SER can only reset the
     3. RSTN is externally connected to a key switch or an external MCU GPIO. If the GPIO is configured in open-drain or push-pull output mode, a 4.7K resistor must be connected in series at RSTN for the following reasons: If the GPIO is configured in open-drain mode (strongly low level, weakly high level, pulled high by a pull-up resistor), this serial resistor can be shorted with a 0 ohm resistor. But if the GPIO is configured for push-pull mode (strongly low level, strongly high level), the serial resistor is a must. Because the RSTN pin can be used as both an input and an output, and the internal software reset output will not be pulled to low without the serial resistor. A 4.7K resistor in series with RSTN is recommended.
 
 2.4.3 BOOT Circuit
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 The default function of GPIO02 of ASR6601 is BOOT. Don’t multiplex GPIO02 to other functions to avoid conflict with the BOOT function.
 
 GPIO02, as a dedicated BOOT pin, must be routed out in the hardware design to cowork with RSTN to enter the download mode, or to be pulled high to exit deep sleep mode.
 
 2.4.4 Crystal Oscillator
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 ASR6601 Demo module uses two crystal oscillators:
 
@@ -204,7 +204,7 @@ ASR6601 Demo module uses two crystal oscillators:
     3. The 32.768K crystal has to be placed as close as possible to the corresponding pins, and the traces should be symmetrical to make the load balanced. When the 32.768K crystal works in its low-power mode, the unbalanced load on each end of the crystal may cause itself to stop working. 
 
 2.4.5 RF Matching
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 |image9|
 
@@ -236,39 +236,39 @@ Please refer to *ASR6601 Datasheet* in the *0_ASR6601_Datasheet/ 00_ASR6601_Data
 |image11|
 
 3. Critical Materials Selection
-===============================
+-------------------------------
 
 .. _crystal-oscillator-1:
 
 3.1 Crystal Oscillator
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 |image12|
 
 3.2 RF Switch
--------------
+~~~~~~~~~~~~~
 
 |image13|
 
 3.3 Power Inductor
-------------------
+~~~~~~~~~~~~~~~~~~
 
 If DC-DC is used to supply power to the regulator (REG PA), the power inductor L6 is a necessity. If LDO is used to supply the power, then the power inductor may not be used. The efficiency of the LDO is lower than that of the DCDC with higher current. Please refer to the requirements of the power inductor in the following table.
 
 |image14|
 
 3.4 External Antenna
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The impedance performance has a significant influence on the results in the distance test, so users should choose an antenna properly.
 
 |image15|
 
 4. PCB Layout Notes
-===================
+-------------------
 
 4.1 Power Supply Routing
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pay attention to the following aspects regarding the PCB power supply routing:
 
@@ -278,7 +278,7 @@ Pay attention to the following aspects regarding the PCB power supply routing:
 4. VDD_IN’s maximum current is 120 mA. The width of the VDD_IN trace should be 0.2 mm.
 
 4.2 RF Routing
---------------
+~~~~~~~~~~~~~~
 
 Pay attention to the following aspects regarding the PCB RF routing shown in the following Figure:
 
@@ -297,7 +297,7 @@ Pay attention to the following aspects regarding the PCB RF routing shown in the
 |image16|
 
 4.3 Crystal Routing
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Pay attention to the following aspects regarding the PCB crystal routing:
 
@@ -319,7 +319,7 @@ Pay attention to the following aspects regarding the PCB crystal routing:
    </center>
 
 A. Appendix - Reference
-=======================
+-----------------------
 
 Summaries of the reference information mentioned in this document:
 
