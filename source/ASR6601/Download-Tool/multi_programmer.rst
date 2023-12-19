@@ -240,17 +240,17 @@ This document mainly introduces the MultiProgrammer Tool (Version 0.3 and above)
 
 The Main Interface of the tool can be divided into six main parts:
 
-\\1. \*\ **Serial Port Configuration\***: Set the baud rate of the communication serial port.
+1. **Serial Port Configuration**: Set the baud rate of the communication serial port.
 
-\\2. \*\ **File Download Configuration\***: Configure the file to be downloaded and the address to download the file to. The user must download at least one file to address 0x08000000 to ensure that the program can run properly.
+2. **File Download Configuration**: Configure the file to be downloaded and the address to download the file to. The user must download at least one file to address 0x08000000 to ensure that the program can run properly.
 
-\\3. \*\ **Download Keys Configuration (optional):\*** Configure the unique identifying information about the module (i.e. Mac address or Triplet information).
+3. **Download Keys Configuration (optional)**: Configure the unique identifying information about the module (i.e. Mac address or Triplet information).
 
-\\4. \*\ **Flash Security Enable:\*** Enable or disable flash security.
+4. **Flash Security Enable**: Enable or disable flash security.
 
-\\5. **Download Operation\***\ *: The*\ **Start\*** button is used for file download. The \*\ **Erase All\*** button is only used when you need to erase all the information in Flash.
+5. **Download Operation**: The **Start** button is used for file download. The **Erase All** button is only used when you need to erase all the information in Flash.
 
-\\6. \*\ **Status Display\***: Display the download progress and result (success or failure).
+6. **Status Display**: Display the download progress and result (success or failure).
 
 2.2.2 Tool Operation
 ^^^^^^^^^^^^^^^^^^^^
@@ -267,23 +267,23 @@ Before download, connect GPIO02 to VCC3.3, then power the module to make it ente
 
 Follow this procedure to download files to ASR6601 Flash with the ASR6601MultiProgrammer tool:
 
-\\1. Choose the serial port:
+1. Choose the serial port:
 
 |image13|
 
-\\2. Select the file to be downloaded:
+2. Select the file to be downloaded:
 
 |image14|
 
 |image15|
 
-\\3. Click the \*\ **Start\*** button to begin downloading:
+3. Click the **Start** button to begin downloading:
 
 |image16|
 
 |image17|
 
-\\4. Finish downloading:
+4. Finish downloading:
 
 |image18|
 
@@ -292,11 +292,11 @@ Follow this procedure to download files to ASR6601 Flash with the ASR6601MultiPr
 
 When the bin files cannot be downloaded to modules, please check the following:
 
-\\1. Check if the serial port connection is normal.
+1. Check if the serial port connection is normal.
 
-\\2. Switch the position of the failed and passed ones, then re-start downloading, to determine whether the module is faulty.
+2. Switch the position of the failed and passed ones, then re-start downloading, to determine whether the module is faulty.
 
-\\3. Check if the module is in download mode: try to reconnect GPIO02 to VCC3.3, then press the \*\ **RESET\*** button to reboot the module.
+3. Check if the module is in download mode: try to reconnect GPIO02 to VCC3.3, then press the **RESET** button to reboot the module.
 
 |image19|
 
