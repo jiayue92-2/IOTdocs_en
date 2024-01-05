@@ -12,13 +12,17 @@ This document introduces the differences in hardware and software between single
 
 The product models corresponding to this document are as follows:
 
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| Model     | Flash  | SRAM  | Core                             | Package       | Frequency     |
-+===========+========+=======+==================================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
++------------+--------+-------+----------------------------------+---------------+---------------+
+| Model      | Flash  | SRAM  | Core                             | Package       | Frequency     |
++============+========+=======+==================================+===============+===============+
+| ASR6601SE  | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CB  | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -98,7 +102,7 @@ For example, PE4259 can be used as both a single-pin controlled RFSW and a compl
 
 We recommend you to use single-pin controlled RFSWs, which are used for reference design of the official ASR module and on which the SDK of ASR650X and ASR6601 chips are all based.      
 
-The following is an example of the hardware design of the ASR6601SE single-pin controlled RFSW. Its model is murata's XMSSJR6G0BA-093. The ASR6601's ANT_SW_CTRL (i.e., SX1262's DIO2 signal) is connected to the RFSW's CTRL (pin6) to control the TX and RX switching. GPIO10 is connected to VDD (pin4) of RFSW, which can be turned off in deep sleep mode to prevent it from leakage (leakage for XMSSJR6G0BA is about 5 uA). The control logic of RFSW is as follows:
+The following is an example of the hardware design of the ASR6601SE/SER single-pin controlled RFSW. Its model is murata's XMSSJR6G0BA-093. The ASR6601's ANT_SW_CTRL (i.e., SX1262's DIO2 signal) is connected to the RFSW's CTRL (pin6) to control the TX and RX switching. GPIO10 is connected to VDD (pin4) of RFSW, which can be turned off in deep sleep mode to prevent it from leakage (leakage for XMSSJR6G0BA is about 5 uA). The control logic of RFSW is as follows:
 
 |image7|
 

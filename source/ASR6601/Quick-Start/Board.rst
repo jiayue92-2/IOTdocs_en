@@ -16,13 +16,17 @@ This document introduces how to test ASR6601 development board to facilitate the
 
 The product models corresponding to this document are as follows.
 
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| Model     | Flash  | SRAM  | Core                             | Package       | Frequency     |
-+===========+========+=======+==================================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
++------------+--------+-------+----------------------------------+---------------+---------------+
+| Model      | Flash  | SRAM  | Core                             | Package       | Frequency     |
++============+========+=======+==================================+===============+===============+
+| ASR6601SE  | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CB  | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -168,7 +172,7 @@ Customers can use Keil to develop ASR6601. Makefile also can be used for compila
 1.2.2 Test Codes
 ^^^^^^^^^^^^^^^^
 
-Test codes can be found in the directory of *projects\\${DEMO_BOARD}\\examples\\lora\\lora\_test* in SDK. *${DEMO_BOARD}* is the corresponding board name. For example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB development board.
+Test codes can be found in the directory of *projects\\${DEMO_BOARD}\\examples\\lora\\lora\_test* in SDK. *${DEMO_BOARD}* is the corresponding board name. For example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB/CBR development board.
 
 1.3 Compilation and Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

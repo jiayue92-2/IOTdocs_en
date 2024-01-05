@@ -7,5 +7,5 @@ ASR6601 Download Tool
    :maxdepth: 2
 
     ASR6601 Tremo Programmer Tool User Guide <tremo_programmer>
-    ASR6601 MultiProgrammer Tool User Guide <multi_programmer>
+    ASR6601 Mass Production Download Scheme Introduction <multi_programmer>
 

@@ -1,5 +1,6 @@
 **ASR6601** Mass Production Download Scheme Introduction
 ========================================================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/量产烧录方案介绍/index.html>`_
 
 Introduction
 ------------

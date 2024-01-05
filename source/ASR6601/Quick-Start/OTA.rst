@@ -16,13 +16,17 @@ This document mainly introduces the OTA upgrade Demo project in LPWAN SoC ASR660
 
 The product models corresponding to this document are as follows.
 
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| Model     | Flash  | SRAM  | Core                             | Package       | Frequency     |
-+===========+========+=======+==================================+===============+===============+
-| ASR6601SE | 256 KB | 64 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
-| ASR6601CB | 128 KB | 16 KB | 32-bit 48 MHz ARM China STAR MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
-+-----------+--------+-------+----------------------------------+---------------+---------------+
++------------+--------+-------+----------------------------------+---------------+---------------+
+| Model      | Flash  | SRAM  | Core                             | Package       | Frequency     |
++============+========+=======+==================================+===============+===============+
+| ASR6601SE  | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CB  | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601SER | 256 KB | 64 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN68, 8*8 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
+| ASR6601CBR | 128 KB | 16 KB | 32-bit 48 MHz Arm China STAR-MC1 | QFN48, 6*6 mm | 150 ~ 960 MHz |
++------------+--------+-------+----------------------------------+---------------+---------------+
 
 **Copyright Notice**
 
@@ -111,7 +115,7 @@ Connect the Target Board to the PC
 1.2.1 OTA Dongle Board Software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-OTA dongle code is located in *projects\\${DEMO_BOARD}\\examples\\ota\\dongle* directory. *${DEMO_BOARD}* is the name of the OTA dongle board, for example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB development board.
+OTA dongle code is located in *projects\\${DEMO_BOARD}\\examples\\ota\\dongle* directory. *${DEMO_BOARD}* is the name of the OTA dongle board, for example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB/CBR development board.
 
 Compile and download the corresponding code to the OTA dongle board.
 
@@ -122,7 +126,7 @@ There are two parts regarding the target board software: OTA bootloader and APP 
 
 (1) **OTA bootloader**
 
-    OTA bootloader code is located in *projects\\${DEMO_BOARD}\\examples\\ota\\bootloader* directory. *${DEMO_BOARD}* is the name of the target board, for example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB development board.
+    OTA bootloader code is located in *projects\\${DEMO_BOARD}\\examples\\ota\\bootloader* directory. *${DEMO_BOARD}* is the name of the target board, for example, ASR6601SE-EVAL stands for ASR6601SE development board, and ASR6601CB-EVAL stands for ASR6601CB/CBR development board.
 
     Compile and download the corresponding code to *0x08000000* address.
 
