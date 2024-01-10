@@ -96,10 +96,10 @@ DOGO supports serial debugging and program download functions:
 4. It supports timestamp capture function. Check the “Timestamp” option, and the prefix of the captured log will be added with a timestamp.
 
 2.2 Program Download
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 2.2.1 Bootloader Download
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. **Step 1**: Select the jumper (the jumper for setting download mode and P4/P5 jumper as shown in the figure) and configure the ASR5601 EVB to UART download mode: MODEL_SEL1 = 0, MODEL_SEL0 = 1, and configure the download serial port to P4/P5. After that, turn on the power switch, and the red light will be lit.
 
@@ -116,7 +116,7 @@ DOGO supports serial debugging and program download functions:
  |image4| 
 
 2.2.2 BLE ROM Download
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Steps 1, 2, and 4** are the same as the steps for Bootloader download.
 
@@ -125,7 +125,7 @@ DOGO supports serial debugging and program download functions:
  |image5| 
 
 2.2.3 APP Download
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 **Steps 1, 2, and 4** are the same as the steps for Bootloader download.
 
@@ -134,7 +134,7 @@ DOGO supports serial debugging and program download functions:
  |image6| 
 
 2.2.4 ATE Download
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 **Steps 1, 2, and 4** are the same as the steps for Bootloader download.
 
@@ -146,7 +146,7 @@ DOGO supports serial debugging and program download functions:
     ATE firmware is mainly used for device production testing, and it does not affect the running of app programs without downloading it.
 
 2.2.5 Download Four Firmware
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Steps 1, 2, and 4** are the same as the steps for Bootloader download.
 
@@ -165,7 +165,7 @@ Click “Save” to close the window, and then check “high” for greater down
  |image8| 
 
 2.3 Program Start-up
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 1. After downloading all the firmware, change the jumper of EVB to normal boot mode (as shown below), then press the Reset button, the SoC will reboot and print the Bootloader log.
 
@@ -176,17 +176,17 @@ Click “Save” to close the window, and then check “high” for greater down
  |image10| 
 
 3. Commonly Used Functions
-==========================
+--------------------------
 
 3.1 Flash Erase
----------------
+~~~~~~~~~~~~~~~
 
 Flash erase can be performed using the DOGO tool. Refer to the following figure for the steps:
 
  |image11| 
 
 3.2 Save Log
-------------
+~~~~~~~~~~~~
 
 Check the “ReceiveFile” option on the right side of the DOGO tool, and then click “OpenPort”. The log data was received, and it will be saved to the tool directory recev_data.
 
