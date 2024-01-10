@@ -6,5 +6,5 @@ ASR560X Download Tool
 .. toctree::
    :maxdepth: 2
 
-    ASR560X Series_BLE Programming Tool User Manual <https://drive.google.com/file/d/1pYEwoKaSZKQuc-i1zaUpZApsO8rd5V1x/view?usp=sharing>
+    ASR560X Series_BLE Programming Tool User Manual <560X_Programming>
 
