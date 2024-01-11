@@ -210,13 +210,13 @@ Execute the GenkeilPrj.bat script in the **project/sonata** directory to generat
 |image10|
 
 
-.. |image1| image:: ../../img/560X_Development_Environment/表1-1.png
-.. |image2| image:: ../../img/560X_Development_Environment/图2-1.png
-.. |image3| image:: ../../img/560X_Development_Environment/图2-2.png
-.. |image4| image:: ../../img/560X_Development_Environment/图2-3.png
-.. |image5| image:: ../../img/560X_Development_Environment/图2-4.png
-.. |image6| image:: ../../img/560X_Development_Environment/图2-5.png
-.. |image7| image:: ../../img/560X_Development_Environment/图2-6.png
-.. |image8| image:: ../../img/560X_Development_Environment/图3-1.png
-.. |image9| image:: ../../img/560X_Development_Environment/图3-2.png
-.. |image10| image:: ../../img/560X_Development_Environment/图4-1.png
+.. |image1| image:: ../../img/560X_Environment/表1-1.png
+.. |image2| image:: ../../img/560X_Environment/图2-1.png
+.. |image3| image:: ../../img/560X_Environment/图2-2.png
+.. |image4| image:: ../../img/560X_Environment/图2-3.png
+.. |image5| image:: ../../img/560X_Environment/图2-4.png
+.. |image6| image:: ../../img/560X_Environment/图2-5.png
+.. |image7| image:: ../../img/560X_Environment/图2-6.png
+.. |image8| image:: ../../img/560X_Environment/图3-1.png
+.. |image9| image:: ../../img/560X_Environment/图3-2.png
+.. |image10| image:: ../../img/560X_Environment/图4-1.png
