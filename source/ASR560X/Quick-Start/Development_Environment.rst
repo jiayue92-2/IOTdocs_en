@@ -135,7 +135,7 @@ The SDK does not provide the environment variable configuration script on Linux 
 
 1. Find the scripts for demo project building (config.mk) in the SDK **build/build_rules/project** directory.
 
-2. In the command-line console, change directory into **build**, then type the command **"make TARGET= *** "** to build the specified project, where ******* corresponds to the name of the project in the **build/build_rules/project** directory, for example: sonata_hl_data_trans_demo. If users need to build the peripheral project, please type **"make TARGET=peripheral/ *** "**.
+2. In the command-line console, change directory into **build**, then type the command **make TARGET=***** to build the specified project, where ******* corresponds to the name of the project in the **build/build_rules/project** directory, for example: sonata_hl_data_trans_demo. If users need to build the peripheral project, please type **make TARGET=peripheral/*****.
 
 3. Use the command **make clean** to delete the compiled project files.
 
