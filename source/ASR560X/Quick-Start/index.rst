@@ -6,7 +6,7 @@ ASR560X Quick Start
 .. toctree::
    :maxdepth: 2
 
-    ASR560X Series Development Environment Setup Guide <https://drive.google.com/file/d/1fxLgH2Qb8LqPhN-SnOTdsTBjrlVmEsLJ/view?usp=share_link>
+    ASR560X Series Development Environment Setup Guide <Development_Environment>
     ASR560X Series Developer Guide <https://drive.google.com/file/d/1ASvrCcM6oCGGPzAbrYTq-0yu1ZsKOaHf/view?usp=share_link>
     ASR560X Series Memory Layout Configuration Application Manual <https://drive.google.com/file/d/1v3zfhoUn3nAgKf69FY_HJS4MkBxMwtWM/view?usp=sharing>
     ASR560X Series BLE Low-Power Application Guide <https://drive.google.com/file/d/1foVXC93L0MhKAe0l5qEK_2c_ST7EIb7n/view?usp=sharing>
