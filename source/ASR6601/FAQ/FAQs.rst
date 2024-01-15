@@ -83,8 +83,6 @@ Yes, it does. The **Keys Folder** option in the main interface of the MultiProgr
 
 Main is the generic power domain, AON (always on) is the power domain for RTC, and AONR (always on retention) is the power domain for SRAM.
 
-​
-
 1.3 Why is there no TX signal?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -125,7 +123,6 @@ In UART FIFO mode, the RX_DONE interrupt is triggered when the data in the RX FI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In Stop3 mode, configure LoRa to wake up the MCU by code PWR->CR1 \|= (1<<7).
-
 In Stop0~Stop2 mode, configure LoRa to wake up the MCU by code PWR->CR0 \|= (1<<6).
 
 1.10 What is the state of each GPIO when the chip is reset?
@@ -174,11 +171,8 @@ The 48-pin demo board used is ASR6601DB earlier, and its Pin24 corresponds to GP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 gpio_set_iomux(GPIOA, GPIO_PIN_5, 5);
-
 rcc_set_mco_clk_source(RCC_MCO_CLK_SOURCE_XO32K);
-
 rcc_set_mco_clk_div(RCC_MCO_CLK_DIV_1);
-
 rcc_enable_mco_clk_output(true);
 
 1.19 How to configure LinkWAN protocol?
