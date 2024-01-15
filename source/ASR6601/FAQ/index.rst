@@ -6,4 +6,4 @@ ASR6601 FAQs
 .. toctree::
    :maxdepth: 2
 
-    ASR6601 FAQs <https://drive.google.com/file/d/1orRveh1gwdM3hhdSwCKX99HNTWF8FKV4/view?usp=sharing>
+    ASR6601 FAQs <FAQs>
