@@ -4,7 +4,7 @@
 
 ASR560X Series Development Environment Setup Guide
 ======================================================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/开发环境搭建与编译指南.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/软件快速入门/开发环境搭建.html>`_
 
 
 Introduction
