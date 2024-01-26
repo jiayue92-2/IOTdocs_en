@@ -1,5 +1,7 @@
 ASR6601 Quick Start Guide
 =========================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/软件快速入门/index.html>`_
+
 
 Introduction
 ------------

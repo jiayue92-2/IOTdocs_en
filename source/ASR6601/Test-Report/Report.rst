@@ -1,5 +1,7 @@
 ASR6601 Test Report
 ===================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/测试报告/测试报告.html>`_
+
 
 Introduction
 ------------

@@ -1,5 +1,7 @@
 **ASR6601** Hardware Design Guide
 =================================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/硬件介绍/硬件设计.html>`_
+
 
 Introduction
 ------------

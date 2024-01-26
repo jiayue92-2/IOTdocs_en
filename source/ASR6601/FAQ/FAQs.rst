@@ -4,7 +4,7 @@
 
 ASR6601 FAQs
 ============
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/常见问题.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/常见问题/常见问题.html>`_
 
 
 Introduction

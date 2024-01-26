@@ -1,5 +1,7 @@
 ASR6601 RFSW User Guide
 ========================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/硬件介绍/射频开关.html>`_
+
 
 Introduction
 ----

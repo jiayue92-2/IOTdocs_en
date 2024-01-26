@@ -1,6 +1,6 @@
 ASR560X Series FAQs
 ===================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/常见问题.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/常见问题/常见问题.html>`_
 
 
 Introduction
