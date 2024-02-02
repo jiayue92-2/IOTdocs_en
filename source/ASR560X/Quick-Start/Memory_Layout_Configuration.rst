@@ -185,7 +185,7 @@ Table 2‑6 Memory Configuration Information before SDK 1.6.0
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20005000    | RAM_104K_EM_24K              | 18 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -207,7 +207,7 @@ Table 2‑7 Memory Configuration Information for SDK 1.6.0 to 1.7.1
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20006000    | RAM_104K_EM_24K              | 22 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -229,7 +229,7 @@ Table 2‑8 Memory Configuration Information after SDK 1.8.0
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20006000    | RAM_104K_EM_24K              | 22 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -351,8 +351,9 @@ Table 2‑13 BLE Peripheral Device (Large RAM Space) Configuration Information
 +----------------------------------------------------+--------------------------------------------------+-------------------------------------------+----------------------------------------------+
 | **Macro Definition**                               | **Symbol Configuration**                         | **BLE Stack Firmware**                    | **Core Lib**                                 |
 +====================================================+==================================================+===========================================+==============================================+
-| APP_COMPILE 、 CFG_DYNA_HL_LL_PERIPHERAL_ONLY | sonata_dyna_hl_ll_peripheral_only_rom_symbol.txt | sonata_dyna_hl_ll_peripheral_only_rom.bin | lib_sonata_dyna_hl_ll_peripheral_only_core.a |
+| **APP_COMPILE**\ 、 CFG_DYNA_HL_LL_PERIPHERAL_ONLY | sonata_dyna_hl_ll_peripheral_only_rom_symbol.txt | sonata_dyna_hl_ll_peripheral_only_rom.bin | lib_sonata_dyna_hl_ll_peripheral_only_core.a |
 +----------------------------------------------------+--------------------------------------------------+-------------------------------------------+----------------------------------------------+
+
 
 .. raw:: html
 
@@ -365,7 +366,7 @@ Table 2‑14 BLE Peripheral (Large RAM Space) Memory Configuration Information
    </center>
 
 +--------------------+--------------------+---------------+------------------------------+----------------+
-| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
+| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
 +====================+====================+===============+==============================+================+
 | 2                  | 1                  | 0x2001E000    | RAM_120K_EM_8K               | 93 KB          |
 +--------------------+--------------------+---------------+------------------------------+----------------+
