@@ -107,7 +107,7 @@ Table 2‑1 Resources before SDK 1.6.0
 
    </center>
 
- |image1|
+|image1|
 
 .. raw:: html
 
@@ -119,7 +119,7 @@ Table 2‑2 Resources for SDK 1.6.0 to 1.7.1
 
    </center>
 
- |image2|
+|image2|
 
 .. raw:: html
 
@@ -131,7 +131,7 @@ Table 2‑3 Resources after SDK 1.8.0
 
    </center>
 
- |image3|
+|image3|
 
 .. raw:: html
 
@@ -252,7 +252,7 @@ Users can adjust the concurrent connections supported by the BLE stack in the so
 
 The default value of SONATA_GAP_MAX_LE_MTU is 2048, if the Pin/OOB pairing function is not used in the project, the value of SONATA_GAP_MAX_LE_MTU macro can be adjusted smaller (not recommended to be lower than 512) to release more available RAM to the application layer. The configuration location can be found in the following figure:
 
- |image4|
+|image4|
 
 .. raw:: html
 
@@ -264,7 +264,7 @@ Table 2‑9 Multi-connection Dynamic RAM Configuration Resource
 
    </center>
 
- |image5|
+|image5|
 
 .. raw:: html
 
@@ -336,7 +336,7 @@ Table 2‑12 BLE Peripheral Device (Large RAM Space) Configuration Source
 
    </center>
 
- |image6|
+|image6|
 
 .. raw:: html
 
@@ -386,7 +386,7 @@ The sonata_hl_peripheral_demo is used as an example to show how to switch the RA
 
 Referring to Table 2-5, replace lib_sonata_ble_core.a in the config.mk $(NAME)_PRE_LIB entry with lib_sonata_ble_core_l.a, as shown below:
 
- |image7|
+|image7|
 
 3.2 Modify Micro Definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -397,7 +397,7 @@ Referring to Table 2-4 change -DCFG_BLE_HL_LL_ROM_M to -DCFG_BLE_HL_LL_ROM_L in 
     If -DCFG_BLE_HL_LL_ROM_M does not exist, -DCFG_BLE_HL_LL_ROM_L should be added.
 
 
- |image8|
+|image8|
 
 
 3.3 Modify Symbol Table
@@ -405,21 +405,21 @@ Referring to Table 2-4 change -DCFG_BLE_HL_LL_ROM_M to -DCFG_BLE_HL_LL_ROM_L in 
 
 Referring to Table 2-4, change sonata_hl_ll_rom_symbol.txt to sonata_hl_ll_rom_l_symbol.txt in config.mk LINKER_MISC_ROM_ELF_PATH entry, as shown below:
 
- |image9|
+|image9|
 
 3.4 Modify Startup Code
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to Table 2-6/2-7/2-8, modify movs r1, #RAM_104K_EM_24K to movs r1, #RAM_112K_EM_16K in startup_cm0p.S:
 
- |image10|
+|image10|
 
 3.5 Modify \_estack and RAM Size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to Table 2-6/2-7/2-8 (Note that different SDK may vary), modify \_estack and RAM length, as shown below:
 
- |image11|
+|image11|
 
 3.6 Download the Corresponding BLE Stack Firmware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -431,7 +431,7 @@ Refer to Table 2-4, select the corresponding BLE stack firmware for downloading.
 
 Starting with SDK V1.6.3, the SDK tools directory provides the ChangeRom tool for switching RAM configuration schemes, as shown below:
 
- |image12|
+|image12|
 
 Users can select the RAM configuration project file to be adjusted and the ROM to be switched in the tool, and then click and modify it.
 
