@@ -185,7 +185,7 @@ Table 2‑6 Memory Configuration Information before SDK 1.6.0
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20005000    | RAM_104K_EM_24K              | 18 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -207,7 +207,7 @@ Table 2‑7 Memory Configuration Information for SDK 1.6.0 to 1.7.1
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20006000    | RAM_104K_EM_24K              | 22 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -229,7 +229,7 @@ Table 2‑8 Memory Configuration Information after SDK 1.8.0
    </center>
 
 +-----------------------+---------------+------------------------------+----------------+
-| **RAM Configuration** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
+| **RAM Configuration** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
 +=======================+===============+==============================+================+
 | M                     | 0x20006000    | RAM_104K_EM_24K              | 22 KB          |
 +-----------------------+---------------+------------------------------+----------------+
@@ -293,7 +293,7 @@ Table 2‑11 Multi-connection Dynamic RAM Memory Configuration Information
    </center>
 
 +--------------------+--------------------+---------------+------------------------------+----------------+
-| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
+| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
 +====================+====================+===============+==============================+================+
 | 2                  | 1                  | 0x2001C000    | RAM_112K_EM_16K              | 67 KB          |
 +--------------------+--------------------+---------------+------------------------------+----------------+
@@ -365,7 +365,7 @@ Table 2‑14 BLE Peripheral (Large RAM Space) Memory Configuration Information
    </center>
 
 +--------------------+--------------------+---------------+------------------------------+----------------+
-| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | \**_estack*\* | **RAM Layout Configuration** | **RAM Length** |
+| **SONATA_CFG_ACT** | **SONATA_CFG_CON** | **_estack** | **RAM Layout Configuration** | **RAM Length** |
 +====================+====================+===============+==============================+================+
 | 2                  | 1                  | 0x2001E000    | RAM_120K_EM_8K               | 93 KB          |
 +--------------------+--------------------+---------------+------------------------------+----------------+
@@ -396,7 +396,9 @@ Referring to Table 2-4 change -DCFG_BLE_HL_LL_ROM_M to -DCFG_BLE_HL_LL_ROM_L in 
 .. attention::
     If -DCFG_BLE_HL_LL_ROM_M does not exist, -DCFG_BLE_HL_LL_ROM_L should be added.
 
+
  |image8|
+
 
 3.3 Modify Symbol Table
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -450,4 +452,3 @@ Users can select the RAM configuration project file to be adjusted and the ROM t
 .. |image10| image:: ../../img/560X_Memory/图3-4.png
 .. |image11| image:: ../../img/560X_Memory/图3-5.png
 .. |image12| image:: ../../img/560X_Memory/图4-1.png
-
