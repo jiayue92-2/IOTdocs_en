@@ -1,5 +1,7 @@
 ASR5502S Datasheet
 ==================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR550X/芯片规格/5502S_规格书.html>`_
+
 
 Introduction
 ------------

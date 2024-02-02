@@ -1,5 +1,7 @@
 ASR IoT DOGO Tool User Guide
 ============================
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR550X/烧录工具介绍/DOGO烧录调试工具.html>`_
+
 
 Introduction
 ------------
