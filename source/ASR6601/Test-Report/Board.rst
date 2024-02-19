@@ -1,7 +1,3 @@
-.. role:: raw-latex(raw)
-   :format: latex
-..
-
 ASR6601 Development Board Test Guide
 ====================================
 `简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/测试报告/参考板.html>`_
