@@ -4,7 +4,7 @@
 
 ASR6601 OTA Upgrade Guide
 =========================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/软件快速入门/空中升级/index.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/软件快速入门/空中升级.html>`_
 
 
 Introduction

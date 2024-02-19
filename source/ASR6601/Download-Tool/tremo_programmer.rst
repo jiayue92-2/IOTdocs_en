@@ -1,6 +1,6 @@
 ASR6601 Tremo Programmer Tool User Guide
 ========================================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/烧录工具介绍/烧录工具/index.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/烧录工具介绍/烧录工具.html>`_
 
 
 Introduction
