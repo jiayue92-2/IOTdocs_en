@@ -69,11 +69,11 @@ Date    Version Release Notes
 
 -  **UART0**\ ：
 
-   - **Function**: DTM Interface
+   Function: DTM Interface
 
-   - **Flow Control**: Hardware flow control (RTS/CTS)
+   Flow Control: Hardware flow control (RTS/CTS)
 
-   - **PIN**:
+   PIN:
 
    -  P2 – UART0 TX
    -  P3 – UART0 RX
@@ -82,9 +82,9 @@ Date    Version Release Notes
 
 -  **UART1**\ ：
 
-   - **Function**: Firmware Download/AT Command/Log Output
+   Function: Firmware Download/AT Command/Log Output
 
-   - **PIN**:
+   PIN:
 
    -  P4 – UART1 TX
    -  P5 – UART1 RX
