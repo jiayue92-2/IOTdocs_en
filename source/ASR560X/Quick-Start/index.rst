@@ -7,7 +7,7 @@ ASR560X Quick Start
    :maxdepth: 2
 
     ASR560X Series Development Environment Setup Guide <Development_Environment>
-    ASR560X Series Developer Guide <https://drive.google.com/file/d/1ASvrCcM6oCGGPzAbrYTq-0yu1ZsKOaHf/view?usp=share_link>
+    ASR560X Series Developer Guide <Developer_Guide>
     ASR560X Series Memory Layout Configuration Application Manual <Memory_Layout_Configuration>
     ASR560X Series BLE Low-Power Application Guide <Low_Power_Application_Guide>
 
