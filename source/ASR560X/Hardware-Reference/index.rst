@@ -9,6 +9,6 @@ ASR560X Hardware Reference
     ASR560X Series Hardware Design Guide <hardware_design>
     ASR560X Series Reference Design <reference_design>
     ASR560X Series Development Board User Guide <Development_Board>
-    ASR560X Series Development Board Schematics <Schematics >
+    ASR560X Series Development Board Schematics <Schematics>
 
 
