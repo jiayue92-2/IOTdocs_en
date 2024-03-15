@@ -1,6 +1,6 @@
 ASR6601 Quick Start Guide
 =========================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/软件快速入门/index.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/软件快速入门/快速入门.html>`_
 
 
 Introduction
@@ -188,7 +188,7 @@ SWD Interfaces
 
    </center>
 
-When using Jlink, ASR6601 needs 4 wires. Connect the interface 1, 7, 9 and 20 of Jlink to the corresponding pins on the board.
+When using Jlink, ASR6601 needs 4 wires. Connect the interface 1, 7, 9 and 20 of Jlink to the corresponding pins on the board. Please note that connecting the RESET pin of J-LINK to the RESET pin of ASR6601 is prohibited, as it may lead to flash erasure.
 
 2.2 SDK Acquisition
 ~~~~~~~~~~~~~~~~~~~~~~~~~

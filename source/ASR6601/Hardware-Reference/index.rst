@@ -7,6 +7,6 @@ ASR6601 Hardware Reference
    :maxdepth: 2
 
     ASR6601 Hardware Design Guide <hardware_design>
-    ASR6601 Matching Network <Matching Network>
+    ASR6601 Matching Network <matching_network>
     ASR6601 RFSW User Guide <RFSW>
 
