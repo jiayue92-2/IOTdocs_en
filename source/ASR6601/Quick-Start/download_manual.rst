@@ -89,4 +89,4 @@ Please note that connecting the RESET pin of J-LINK to the RESET pin of ASR6601 
 Open the ASR6601 JFlash project in the tool/JLink/JFlash directory of the SDK using JFlash and start downloading.
 
 .. |image1| image:: ../../img/6601_Download/图1-1.png
-.. |image2| image:: ../../img/6601_Download/图1-2.png
+.. |image2| image:: ../../img/6601_Download/图2-1.png
