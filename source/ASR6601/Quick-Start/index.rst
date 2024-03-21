@@ -11,4 +11,5 @@ ASR6601 Quick Start
     ASR6601 Reference Manual <https://drive.google.com/file/d/1wcSbXmZprcF_4Wm8qGEWnjt2lq0EllY_/view?usp=sharing>
     ASR6601 OTA Upgrade Guide <OTA>
     ASR6601 BootLoader Communication Notes <communication_notes>
+    ASR6601 J-Link Download User Guide <download_manual>
 
