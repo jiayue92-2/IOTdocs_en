@@ -1,6 +1,6 @@
 **ASR560X Series Low-temperature Application Note**
 ===================================================
-`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/软件快速入门/低温应用指南.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR560X/软件快速入门/560X_低温应用指南.html>`_
 
 
 Introduction
