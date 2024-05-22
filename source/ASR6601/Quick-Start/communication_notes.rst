@@ -91,7 +91,7 @@ Parity: None
 Flow control: None
 
 1.2 Command List
-----------------
+~~~~~~~~~~~~~~~~
 
 ======== == =====================================================
 Command  ID Description
