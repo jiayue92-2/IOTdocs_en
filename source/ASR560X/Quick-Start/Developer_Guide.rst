@@ -63,7 +63,7 @@ Homepage: http://www.asrmicro.com/
 ======= ======= ==============
 Date    Version Release Notes
 ======= ======= ==============
-2023.03 V1.3.0  First Release.
+2024.09 V1.3.1  Updated the figure.
 ======= ======= ==============
 
 1. Platform
