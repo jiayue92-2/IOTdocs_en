@@ -1,4 +1,4 @@
-ASR6601 Demo Project
+ASR6601 Demo Project/ SDK
 ===========================
 `简体中文 <https://asriot-cn.readthedocs.io/zh/latest/ASR6601/演示工程/index.html>`_
 
