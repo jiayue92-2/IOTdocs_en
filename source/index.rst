@@ -10,9 +10,8 @@ The following is the product selector for `ASR <http://www.asrmicro.com/index>`_
     IoT/AIoT Wi-Fi MCU<iot>
     Wi-Fi Interface Transceiver<透传>
     LoRa Product<lora>
-    Bluetooth Product<蓝牙>
 
-Below is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT products.
+Below is the public documentation for `ASR <http://www.asrmicro.com/index>`_ IoT products.
 
 
 Wi-Fi Chips
