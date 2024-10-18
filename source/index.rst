@@ -2,7 +2,17 @@ ASR Docs Page
 =============================
 `简体中文 <https://asriot-cn.readthedocs.io/zh/latest/>`_
 
-This is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT products.
+The following is the product selector for `ASR <http://www.asrmicro.com/index>`_ IoT products.
+
+.. toctree::
+   :maxdepth: 2
+
+    IoT/AIoT Wi-Fi MCU<iot>
+    Wi-Fi Interface Transceiver<透传>
+    LoRa Product<lora>
+    Bluetooth Product<蓝牙>
+
+Below is the documentation for `ASR <http://www.asrmicro.com/index>`_ IoT products.
 
 
 Wi-Fi Chips

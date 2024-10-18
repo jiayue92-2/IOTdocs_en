@@ -1,0 +1,17 @@
+Bluetooth Product
+=====================
+`简体中文 <https://asriot.readthedocs.io/zh/latest/蓝牙.html>`_
+
+
+.. raw:: html
+
+   <center>
+
+|image1| 
+
+.. raw:: html
+
+   </center>
+
+
+.. |image1| image:: ../../img/图1.png
