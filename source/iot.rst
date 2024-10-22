@@ -1,6 +1,6 @@
 IoT/AIoT Wi-Fi MCU
 ================
-`简体中文 <https://asriot.readthedocs.io/zh/latest/iot.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/iot.html>`_
 
 +---------------------+----------------+----------------+----------------+--------------------+--------------------+--------------------+--------------+
 | Model               | ASR5502S       | ASR5502A       | ASR5502C       | ASR5822T           | ASR5822S           | ASR5822N           | ASR5952S     |

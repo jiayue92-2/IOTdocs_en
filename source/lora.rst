@@ -1,6 +1,6 @@
 LoRa Product
 ================
-`简体中文 <https://asriot.readthedocs.io/zh/latest/lora.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/lora.html>`_
 
 
 +----------------+----------------+-------------+-------------------------+-------------------------+

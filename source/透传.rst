@@ -1,6 +1,6 @@
 Wi-Fi Interface Transceiver
 =====================
-`简体中文 <https://asriot.readthedocs.io/zh/latest/透传.html>`_
+`简体中文 <https://asriot-cn.readthedocs.io/zh/latest/透传.html>`_
 
 
 +---------------------+-------------+-------------+--------------+-------------+-------------+
