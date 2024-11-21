@@ -25,7 +25,6 @@ Wi-Fi Chips
 
 .. |ASR550X SoC| image:: img/10.png
 .. _ASR550X SoC: ASR550X/index.html
-\
 
 
 BT/BLE Chips
