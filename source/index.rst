@@ -40,6 +40,17 @@ BT/BLE Chips
 .. _ASR560X SoC: ASR560X/index.html
 
 
+Combo 芯片
+--------------------------------
+
+.. list-table::
+
+    *   -   |ASR582X SoC|_
+    *   -   `ASR582X SoC`_ 
+
+.. |ASR582X SoC| image:: img/12.png
+.. _ASR582X SoC: ASR582X/index.html
+
 
 LPWAN Chips
 --------------------------------
@@ -84,7 +95,20 @@ LPWAN Chips
    ASR560X/FAQ/index
    ASR560X/Certification/index
    ASR560X/Test-Report/index
+
+.. toctree::
+   :hidden:
+   :caption: ASR582X
    
+   ASR582X/Datasheet/index
+   ASR582X/Hardware-Reference/index
+   ASR582X/Download-Tool/index
+   ASR582X/Demo-Project/index
+   ASR582X/Quick-Start/index
+   ASR582X/FAQ/index
+   ASR582X/Certification/index
+   ASR582X/Test-Report/index
+
 .. toctree::
    :hidden:
    :caption: ASR6601
